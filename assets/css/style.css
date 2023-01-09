@@ -244,3 +244,12 @@ header{
     color: #fff;
     box-shadow: 1px 2px 3px #fff;
 }
+
+/* Mobile */
+@media screen and (max-width: 460px){
+    .search-box input, .search-box button, .search-box select{
+        min-width: 300px;
+        margin-top: 5px;
+    }    
+
+}
