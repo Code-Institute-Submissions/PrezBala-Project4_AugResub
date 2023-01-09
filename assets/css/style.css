@@ -175,3 +175,14 @@ header{
     color: #fff;
     cursor: pointer;
 }
+
+@font-face {
+    font-family:aquire;
+    src:url(aquire.otf);
+}
+
+.brand{
+    font-size:60px;
+    display: inline-block;
+    font-family:aquire;
+}
