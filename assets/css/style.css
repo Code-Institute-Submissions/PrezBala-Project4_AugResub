@@ -214,3 +214,33 @@ header{
         font-size:20px;
     }
 }
+
+  /* Search Box styles */
+  .search-box{
+    border: solid 1px #52057b;
+    margin-top: 20px;
+    padding: 40px;
+    display:flex;
+    justify-content: center;
+    box-shadow:1px 2px 3px #52057b;
+}
+
+.search-box select{
+    padding: 10px;
+}
+
+.search-box input{
+    padding: 10px;
+}
+
+.search-box button{
+    padding: 10px;
+    background-color:#fff;
+    color:#000000;
+}
+
+.search-box button:hover{
+    background-color: #000000;
+    color: #fff;
+    box-shadow: 1px 2px 3px #fff;
+}
