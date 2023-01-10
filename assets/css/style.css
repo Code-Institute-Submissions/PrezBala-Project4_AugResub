@@ -216,9 +216,11 @@ header{
 }
 
 .brand{
+    font-family: Fredoka;
     font-size:60px;
     display: inline-block;
     color: #fcfbfe;
+
 }
 
 /*Mobile*/
