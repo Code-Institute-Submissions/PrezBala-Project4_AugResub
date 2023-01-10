@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 *{
     box-sizing: border-box;
 }
@@ -10,7 +12,7 @@ html{
 }
 
 a{
-    color:#FF0042;
+    color:#ba1e68;
     font-weight: bolder;
     text-decoration: none;
 }
@@ -216,7 +218,7 @@ header{
 .brand{
     font-size:60px;
     display: inline-block;
-    font-family:aquire;
+    color: #7649fe;
 }
 
 /*Mobile*/
@@ -249,12 +251,12 @@ header{
 
   /* Search Box styles */
   .search-box{
-    border: solid 1px #52057b;
+    border: solid 1px #7649fe;
     margin-top: 20px;
     padding: 40px;
     display:flex;
     justify-content: center;
-    box-shadow:1px 2px 3px #52057b;
+    box-shadow:1px 2px 3px #7649fe;
 }
 
 .search-box select{
@@ -301,7 +303,7 @@ header{
 footer{
     margin-top: 20px;
     padding: 20px;
-    background-color:  #52057b;
+    background-color:  #7649fe;
     display: block;
     text-align: center;
 }
