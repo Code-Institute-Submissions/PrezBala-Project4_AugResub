@@ -169,7 +169,7 @@ header{
     align-items: center;
 }
 .navigation{
-    background-color:#52057b;
+    background-color:#0c164f;
     padding: 10px;
     width: 65%;
     display: inline-block;
@@ -251,12 +251,12 @@ header{
 
   /* Search Box styles */
   .search-box{
-    border: solid 1px #7649fe;
+    border: solid 1px #5643fd;
     margin-top: 20px;
     padding: 40px;
     display:flex;
     justify-content: center;
-    box-shadow:1px 2px 3px #7649fe;
+    box-shadow:1px 2px 3px #5643fd;
 }
 
 .search-box select{
