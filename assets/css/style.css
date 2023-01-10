@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 *{
     box-sizing: border-box;
@@ -72,7 +72,7 @@ h1{
 }
 
 .subforum-title{
-    background-color:#292B2E;
+    background-color:#0c164f;
     padding: 5px;
     border-radius: 5px;
     margin:4px;
@@ -218,7 +218,7 @@ header{
 .brand{
     font-size:60px;
     display: inline-block;
-    color: #7649fe;
+    color: #fcfbfe;
 }
 
 /*Mobile*/
@@ -303,7 +303,7 @@ header{
 footer{
     margin-top: 20px;
     padding: 20px;
-    background-color:  #7649fe;
+    background-color:  #0c164f;
     display: block;
     text-align: center;
 }
