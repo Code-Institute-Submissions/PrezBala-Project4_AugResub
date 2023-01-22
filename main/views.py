@@ -5,13 +5,9 @@ def home(request):
     return render(request, "index.html", {})
 
 
-def home(request):
+def detail(request):
     return render(request, "detail.html", {})
 
 
-def home(request):
+def posts(request):
     return render(request, "posts.html", {})
-
-
-def home(request):
-    return render(request, "index.html", {})
