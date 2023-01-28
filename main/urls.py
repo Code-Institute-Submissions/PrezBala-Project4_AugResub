@@ -6,4 +6,5 @@ urlpatterns = [
     path("", home, name="home"),
     path("detail/", detail, name="detail"),
     path("posts/", posts, name="posts"),
+    path('hitcount/', include('hitcount.urls', namespace='hitcount')),
 ]
