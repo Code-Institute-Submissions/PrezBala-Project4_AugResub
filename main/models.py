@@ -12,7 +12,14 @@ class Author(models.Model):
     slug = slug = models.SlugField(max_length=400, unique=True, blank=True)
     bio = models.TextField()
     points = models.IntegerField(default=0)
-    profile_pic = ResizedImageField(size=[50, 80], quality=100, upload_to="authors", default=None, null=True, blank=True)
+    profile_pic = ResizedImageField(
+        size=[50, 80],
+        quality=100,
+        upload_to="authors",
+        default=None,
+        null=True,
+        blank=True
+    )
 
     def save(self, *args, **kwargs):
         if not self.slug:
