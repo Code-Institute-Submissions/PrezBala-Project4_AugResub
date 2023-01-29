@@ -31,7 +31,7 @@ class Author(models.Model):
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.fullname)
-        super(Post, self).save(*args, **kwargs)
+        super(Author, self).save(*args, **kwargs)
 
 
 class Category(models.Model):
