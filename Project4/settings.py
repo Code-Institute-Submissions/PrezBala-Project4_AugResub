@@ -29,7 +29,6 @@ ALLOWED_HOSTS = []
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-prezbala-project4-zpsj6hrplvb.ws-eu84.gitpod.io/']
 
-
 # Application definition
 
 INSTALLED_APPS = [
