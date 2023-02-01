@@ -19,15 +19,15 @@
                     <i class="fa fa-globe center"></i>
                 </div>
                 <div class="subforum-description subforum-column">
-                    <h4><a href="#">Description Title</a></h4>
-                    <p>Description Content: Gaming test forum bla bla bla</p>
+                    <h4><a href="{{forum.get_url}}">{{forum.title}}</a></h4>
+                    <p>{{forum.description}}</p>
                 </div>
                 <div class="subforum-stats subforum-column center">
-                    <span>24 Posts | 12 Topics</span>
+                    <span>{{forum.num_posts}} Posts</span>
                 </div>
                 <div class="subforum-info subforum-column">
-                    <b><a href="">Last post</a></b> by <a href="">JustAUser</a> 
-                    <br>on <small>12 Jan 2023</small>
+                    <b><a href="{{forum.last_post.get_url}}">Last post</a></b> by <a href="">{{forum.last_post.user.fullname|title}}</a> 
+                    <br>on <small>{{forum.last_post.date|date}}</small>
                 </div>
             </div>
 
