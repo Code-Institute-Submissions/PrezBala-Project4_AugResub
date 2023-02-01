@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Author, Category, Post
-
+from .utils import update_views
 
 def home(request):
     return render(request, "index.html", {})
@@ -11,7 +11,7 @@ def detail(request, slug):
     context = {
         "post": post
     }
-
+    update_views(request, post)
     return render(request, "detail.html", context)
 
 
