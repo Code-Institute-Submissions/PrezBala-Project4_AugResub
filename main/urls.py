@@ -6,6 +6,6 @@ from .views import (
 urlpatterns = [
     path("", home, name="home"),
     path("detail/<slug>/", detail, name="detail"),
-    path("posts/", posts, name="posts"),
+    path("posts/<slug>/", posts, name="posts"),
     path('tinymce/', include('tinymce.urls')),
 ]
