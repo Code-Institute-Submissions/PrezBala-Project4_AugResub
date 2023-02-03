@@ -116,3 +116,11 @@ class Post(models.Model):
         return reverse("detail", kwargs={
             "slug": self.slug
         })
+
+    @property
+    def num_comments(self):
+        return self.comments.count()
+
+    @property
+    def last_reply(self):
+        return self.comments.latest("date")

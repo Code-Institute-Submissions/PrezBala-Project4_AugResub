@@ -68,7 +68,7 @@
         </div>
 
 
-        !--Reply section-->
+        <!--Reply section-->
         {% for reply in comment.replies.all %}
         <div class="comments-container" style="width: 95%; margin-left:5%;">
             <div class="body">
@@ -86,11 +86,9 @@
             </div>
         </div>
 
-
+        {% endfor %}
         {% endfor %}
 
-
-  
 </div>
 
     {% endblock content %}
