@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, authenticate
+from django.contrib.auth.decorators import login_required
 
 
 def signup(request):
@@ -37,9 +38,10 @@ def signin(request):
     return render(request, "register/signin.html", context)
 
 
+@login_required
 def update_profile(request):
     context = {}
-    user = request.user 
+    user = request.user
     form = UpdateForm(request.POST, request.FILES)
     if request.method == "POST":
         if form.is_valid():
@@ -55,6 +57,7 @@ def update_profile(request):
     return render(request, "register/update.html", context)
 
 
+@login_required
 def logout(request):
     lt(request)
     return redirect("home")
