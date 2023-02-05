@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Author, Category, Post
 from .utils import update_views
+from .forms import PostForm
+from django.contrib.auth.decorators import login_required
 
 
 def home(request):
@@ -30,3 +32,24 @@ def posts(request, slug):
         "forum": category,
     }
     return render(request, "posts.html", context)
+
+
+@login_required
+def create_post(request):
+    context = {}
+    form = PostForm(request.POST or None)
+    if request.method == "POST":
+        if form.is_valid():
+            print("\n\n its valid")
+            author = Author.objects.get(user=request.user)
+            new_post = form.save(commit=False)
+            new_post.user = author
+            new_post.save()
+            form.save_m2m()
+            return redirect("home")
+    context.update({
+        "form": form,
+        "title": "ASTRO: Create New Post"
+    })
+    return render(request, "create_post.html", context)
+
