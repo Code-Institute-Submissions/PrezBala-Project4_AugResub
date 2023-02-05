@@ -59,10 +59,11 @@ class Category(models.Model):
     @property
     def num_posts(self):
         return Post.objects.filter(categories=self).count()
-          
+      
     @property
     def last_post(self):
         return Post.objects.filter(categories=self).latest("date")
+
 
 class Reply(models.Model):
     user = models.ForeignKey(Author, on_delete=models.CASCADE)
