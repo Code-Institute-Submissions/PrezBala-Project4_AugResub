@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Author, Category, Post
+from .models import Author, Category, Post, Comment, Reply
 from .utils import update_views
 from .forms import PostForm
 from django.contrib.auth.decorators import login_required
@@ -52,4 +52,3 @@ def create_post(request):
         "title": "ASTRO: Create New Post"
     })
     return render(request, "create_post.html", context)
-
