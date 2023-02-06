@@ -30,7 +30,9 @@
             </nav>
             <a class="bar-icon" id="iconBar" onclick="hideIconBar()"><i class="fa fa-bars"></i></a>
             <div class="brand">Astro Community</div>
+            {% if user.is_authenticated %}
             <div style="font-size:50px;font-weight300px;margin-left:100px;"><a href="{% url 'create_post' %}">+</a></div>   
+            {% endif %}
         </div>
 
     
