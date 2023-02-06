@@ -8,5 +8,4 @@ urlpatterns = [
     path("detail/<slug>/", detail, name="detail"),
     path("posts/<slug>/", posts, name="posts"),
     path("create_post", create_post, name="create_post"),
-
 ]
