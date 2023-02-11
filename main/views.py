@@ -18,7 +18,7 @@ def detail(request, slug):
     post = get_object_or_404(Post, slug=slug)
     if request.user.is_authenticated:
         author = Author.objects.get(user=request.user)
-  
+
     if "comment-form" in request.POST:
         comment = request.POST.get("comment")
         new_comment, created = Comment.objects.get_or_create(user=author, content=comment)
