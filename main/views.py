@@ -23,7 +23,7 @@ def home(request):
         "num_users":num_users,
         "num_categories":num_categories,
         "last_post":last_post,
-        "title": "OZONE forum app"
+        "title": "ASTRO forum app"
     }
 
     return render(request, "index.html", context)
@@ -47,7 +47,8 @@ def detail(request, slug):
         comment_obj.replies.add(new_reply.id)
 
     context = {
-        "post": post
+        "post":post,
+        "title": "ASTRO: "+post.title,
     }
     update_views(request, post)
 
@@ -64,10 +65,12 @@ def posts(request, slug):
     except PageNotAnInteger:
         posts = paginator.page(1)
     except EmptyPage:
-        posts = paginator.page(paginator.num_pages) 
+        posts = paginator.page(paginator.num_pages)
+
     context = {
         "posts": posts,
         "forum": category,
+        "title": "ASTRO: Posts"
     }
     return render(request, "posts.html", context)
 
