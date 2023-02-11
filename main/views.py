@@ -82,3 +82,13 @@ def create_post(request):
         "title": "ASTRO: Create New Post"
     })
     return render(request, "create_post.html", context)
+
+
+def latest_posts(request):
+    posts = Post.objects.all().filter(approved=True)[:10]
+    context = {
+        "posts": posts,
+        "title": "ASTRO: Latest 10 Posts"
+    }
+
+    return render(request, "latest-posts.html", context)
