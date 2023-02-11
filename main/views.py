@@ -35,6 +35,7 @@ def detail(request, slug):
         "post": post
     }
     update_views(request, post)
+    
     return render(request, "detail.html", context)
 
 
