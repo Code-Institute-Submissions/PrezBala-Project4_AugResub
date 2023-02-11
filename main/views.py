@@ -4,6 +4,7 @@ from .utils import update_views
 from .forms import PostForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 
 def home(request):
@@ -56,7 +57,14 @@ def detail(request, slug):
 def posts(request, slug):
     category = get_object_or_404(Category, slug=slug)
     posts = Post.objects.filter(approved=True, categories=category)
-
+    paginator = Paginator(posts, 5)
+    page = request.GET.get("page")
+    try:
+        posts = paginator.page(page)
+    except PageNotAnInteger:
+        posts = paginator.page(1)
+    except EmptyPage:
+        posts = paginator.page(paginator.num_pages) 
     context = {
         "posts": posts,
         "forum": category,
