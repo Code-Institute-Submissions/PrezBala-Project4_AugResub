@@ -3,12 +3,26 @@ from .models import Author, Category, Post, Comment, Reply
 from .utils import update_views
 from .forms import PostForm
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 
 
 def home(request):
     forums = Category.objects.all()
+    num_posts = Post.objects.all().count()
+    num_users = User.objects.all().count()
+    num_categories = forums.count()
+    try:
+        last_post = Post.objects.latest("date")
+    except:
+        last_post = []
+
     context = {
-        "forums": forums,
+        "forums":forums,
+        "num_posts":num_posts,
+        "num_users":num_users,
+        "num_categories":num_categories,
+        "last_post":last_post,
+        "title": "OZONE forum app"
     }
 
     return render(request, "index.html", context)
@@ -35,7 +49,7 @@ def detail(request, slug):
         "post": post
     }
     update_views(request, post)
-    
+
     return render(request, "detail.html", context)
 
 
