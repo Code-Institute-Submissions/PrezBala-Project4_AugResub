@@ -16,6 +16,21 @@ def home(request):
 
 def detail(request, slug):
     post = get_object_or_404(Post, slug=slug)
+    if request.user.is_authenticated:
+        author = Author.objects.get(user=request.user)
+  
+    if "comment-form" in request.POST:
+        comment = request.POST.get("comment")
+        new_comment, created = Comment.objects.get_or_create(user=author, content=comment)
+        post.comments.add(new_comment.id)
+
+    if "reply-form" in request.POST:
+        reply = request.POST.get("reply")
+        commenr_id = request.POST.get("comment-id")
+        comment_obj = Comment.objects.get(id=commenr_id)
+        new_reply, created = Reply.objects.get_or_create(user=author, content=reply)
+        comment_obj.replies.add(new_reply.id)
+
     context = {
         "post": post
     }
