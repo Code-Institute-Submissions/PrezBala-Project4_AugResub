@@ -14,15 +14,15 @@ def home(request):
     num_categories = forums.count()
     try:
         last_post = Post.objects.latest("date")
-    except:
+    except Post.DoesNotExist:
         last_post = []
 
     context = {
-        "forums":forums,
-        "num_posts":num_posts,
-        "num_users":num_users,
-        "num_categories":num_categories,
-        "last_post":last_post,
+        "forums": forums,
+        "num_posts": num_posts,
+        "num_users": num_users,
+        "num_categories": num_categories,
+        "last_post": last_post,
         "title": "ASTRO forum app"
     }
 
@@ -36,18 +36,24 @@ def detail(request, slug):
 
     if "comment-form" in request.POST:
         comment = request.POST.get("comment")
-        new_comment, created = Comment.objects.get_or_create(user=author, content=comment)
+        new_comment, created = Comment.objects.get_or_create(
+            user=author,
+            content=comment
+        )
         post.comments.add(new_comment.id)
 
     if "reply-form" in request.POST:
         reply = request.POST.get("reply")
-        commenr_id = request.POST.get("comment-id")
-        comment_obj = Comment.objects.get(id=commenr_id)
-        new_reply, created = Reply.objects.get_or_create(user=author, content=reply)
+        comment_id = request.POST.get("comment-id")
+        comment_obj = Comment.objects.get(id=comment_id)
+        new_reply, created = Reply.objects.get_or_create(
+            user=author,
+            content=reply
+        )
         comment_obj.replies.add(new_reply.id)
 
     context = {
-        "post":post,
+        "post": post,
         "title": "ASTRO: "+post.title,
     }
     update_views(request, post)
