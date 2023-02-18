@@ -37,6 +37,7 @@
 
     
         <!--SearchBox Section-->
+        <form action="{% url 'search_result' %}" role="form" method="GET">
         <div class="search-box">
             <div>
                 <select name="" id="">
@@ -47,7 +48,8 @@
                 <input type="text" name="q" placeholder="search ...">
                 <button><i class="fa fa-search"></i></button>
             </div>
-        </div>
+         </div>
+         </form>
     </header>
 
     {% block content %}
