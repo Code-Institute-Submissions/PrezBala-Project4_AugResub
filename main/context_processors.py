@@ -1,4 +1,4 @@
-
+from main.models import Post
 
 def searchFunction(request):
     context = {}
