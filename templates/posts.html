@@ -18,7 +18,20 @@
 
             {% for post in posts %}
             <div class="table-row">
+
+                {% if post.closed == True %}
+                <div class="status"><i class="fa fa-lock"></i></div>
+                {% elif post.num_comments == 0 %}
+                <div class="status"><i class="fa fa-frown-o"></i></div>
+                {% elif post.num_comments > 0 and post.num_comments < 2 %}
+                <div class="status"><i class="fa fa-book"></i></div>
+                {% elif post.num_comments > 2 and post.num_comments < 4 %}
+                <div class="status"><i class="fa fa-rocket"></i></div>
+                {% elif post.num_comments >= 4 %}
                 <div class="status"><i class="fa fa-fire"></i></div>
+                
+                {% endif %}
+                
                 <div class="subjects">
                     <a href="{{post.get_url}}">{{post.title}}</a>
                     <br>
@@ -44,12 +57,12 @@
         <!--pagination ends-->
     </div>
 
-    <!-- <div class="note">
+  <div class="note">
         <span><i class="fa fa-frown-o"></i>&nbsp; 0 Engagement Topic</span>&nbsp;&nbsp;&nbsp;<a href=""><i class="fa fa-share-square"></i></a><br>
         <span><i class="fa fa-book"></i>&nbsp; Low Engagement Topic</span>&nbsp;&nbsp;&nbsp;<a href=""><i class="fa fa-share-square"></i></a><br>
         <span><i class="fa fa-fire"></i>&nbsp; Popular Topic</span>&nbsp;&nbsp;&nbsp;<a href=""><i class="fa fa-share-square"></i></a><br>
         <span><i class="fa fa-rocket"></i>&nbsp; High Engagement Topic</span>&nbsp;&nbsp;&nbsp;<a href=""><i class="fa fa-share-square"></i></a><br>
         <span><i class="fa fa-lock"></i>&nbsp; Closed Topic</span>&nbsp;&nbsp;&nbsp;<a href=""><i class="fa fa-share-square"></i></a><br>
-    </div> -->
+    </div> 
 
     {% endblock content %}

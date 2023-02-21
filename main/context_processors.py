@@ -1,5 +1,6 @@
 from main.models import Post
 
+
 def searchFunction(request):
     search_context = {}
     posts = Post.objects.all()
