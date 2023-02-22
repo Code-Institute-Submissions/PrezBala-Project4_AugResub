@@ -54,11 +54,12 @@
         {% endif %}
 
         <!--Comments Section-->
+
         {% for comment in post.comments.all %}
         <div class="comments-container">
             <div class="body">
                 <div class="authors">
-                    <div class="username"><a href="">{{reply.user.fullname|title}}</a></div>
+                    <div class="username"><a href="">{{comment.user.fullname|title}}</a></div>
                     <div>Role</div>
                     <img src="{{comment.user.profile_pic.url}}" alt="">
                     <div>Posts: <u>{{comment.user.num_posts}}</u></div>
@@ -67,9 +68,11 @@
                 <div class="content">
                     {{comment.content}}
                     <br>
+                    {% if request.user.is_authenticted %}
                     <div class="comment">
                         <button onclick="showReplies('comment{{comment.id}}')">Reply</button>
                     </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
