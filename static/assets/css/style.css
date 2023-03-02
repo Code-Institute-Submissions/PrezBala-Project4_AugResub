@@ -76,7 +76,7 @@ h1{
 }
 
 .subforum-title{
-    background-color:#0c164f;
+    background-color:#7649fe;
     padding: 5px;
     border-radius: 5px;
     margin:4px;
@@ -173,7 +173,7 @@ header{
     align-items: center;
 }
 .navigation{
-    background-color:#0c164f;
+    background-color:#7649fe;
     padding: 10px;
     width: 65%;
     display: inline-block;
@@ -223,7 +223,7 @@ header{
     font-family: Fredoka;
     font-size:60px;
     display: inline-block;
-    color: #030205;
+    color: #fff;
 
 }
 
@@ -309,7 +309,7 @@ header{
 footer{
     margin-top: 20px;
     padding: 20px;
-    background-color:  #0c164f;
+    background-color:  #7649fe;
     display: block;
     text-align: center;
 }
