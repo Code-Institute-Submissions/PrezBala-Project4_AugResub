@@ -68,7 +68,7 @@
                 <div class="content">
                     {{comment.content}}
                     <br>
-                    {% if request.user.is_authenticted %}
+                    {% if request.user.is_authenticated %}
                     <div class="comment">
                         <button onclick="showReplies('comment{{comment.id}}')">Reply</button>
                     </div>
