@@ -31,11 +31,17 @@
             <a class="bar-icon" id="iconBar" onclick="hideIconBar()"><i class="fa fa-bars"></i></a>
             <div class="brand">Astro Community</div>
             {% if user.is_authenticated %}
-            <div style="font-size:30px;font-weight:300px;margin-left:100px;background-color:#FFFFFF;padding:10px;"><a href="{% url 'create_post' %}">Click here to create a new post</a></div>
+            <div style="font-size:25px;font-weight:300px;margin-left:100px;background-color:#FFFFFF;padding:10px;"><a href="{% url 'create_post' %}">+</a></div>
             {% endif %}
         </div>
 
-    
+        <div class="container">
+            <div class="video-wrapper">
+                <video playsinline autoplay muted loop poster>
+                  <source src="static/assets/videos/moon.mp4" type="video/webm">
+                </video>
+              </div>
+
         <!--SearchBox Section-->
         <form action="{% url 'search_result' %}" role="form" method="GET">
         <div class="search-box">

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 :root {
-    background-image: url("../images/spacey.jpg");
+    background-image: url("../images/blackhole.jpg");
     background-color: #cccccc;
 }
 
@@ -76,7 +76,7 @@ h1{
 }
 
 .subforum-title{
-    background-color:#7649fe;
+    background-color:#BBC0C0;
     padding: 5px;
     border-radius: 5px;
     margin:4px;
@@ -132,8 +132,33 @@ h1{
         background-image: linear-gradient(to right, rgba(190, 190, 190, 0), rgba(255, 255, 255, 0.75), rgba(190, 190, 190, 0));
     }
 
+    .video-wrapper {
+        /* Telling our absolute positioned video to 
+        be relative to this element */
+        position: relative;
+        margin-top: 20px;
+        width: 310px;
+        height: 100px;
+      
+        /* Will not allow the video to overflow the 
+        container */
+        overflow: hidden;
+      
+        /* Centering the container's content vertically 
+        and horizontally */
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     
-
+      video {
+        object-fit: initial;
+        height: auto;
+        width: auto;
+        position: static;
+        }
+        
   }
 
 /* Tablets */
@@ -160,6 +185,29 @@ h1{
         font-size: 16px;
     }
 
+    
+    .video-wrapper {
+        /* Telling our absolute positioned video to 
+        be relative to this element */
+        position: relative;
+        margin-top: 20px;
+        width: 450px;
+        height: 200px;
+      
+        /* Will not allow the video to overflow the 
+        container */
+        overflow: hidden;
+      
+
+      }
+    
+      video {
+        object-fit: initial;
+        height: auto;
+        width: auto;
+        position: static;
+        }
+
   }
   
 /*   Header Section    */
@@ -173,7 +221,7 @@ header{
     align-items: center;
 }
 .navigation{
-    background-color:#7649fe;
+    background-color:#BBC0C0;
     padding: 10px;
     width: 65%;
     display: inline-block;
@@ -257,12 +305,12 @@ header{
 
   /* Search Box styles */
   .search-box{
-    border: solid 1px #5643fd;
+    border: solid 1px #BBC0C0;
     margin-top: 20px;
     padding: 40px;
     display:flex;
     justify-content: center;
-    box-shadow:1px 2px 3px #5643fd;
+    box-shadow:1px 2px 3px #BBC0C0;
 }
 
 .search-box select{
@@ -309,7 +357,7 @@ header{
 footer{
     margin-top: 20px;
     padding: 20px;
-    background-color:  #7649fe;
+    background-color:  #BBC0C0;
     display: block;
     text-align: center;
 }
