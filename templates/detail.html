@@ -24,7 +24,7 @@
 			</div>
 			<div class="content">
 				{{post.content|safe}}
-				<br />
+				<br >
 				<div class="comment">
 					<button onclick="showComment()">Comment</button>
 				</div>
@@ -64,7 +64,7 @@
 			</div>
 			<div class="content">
 				{{comment.content}}
-				<br />
+				<br >
 				{% if request.user.is_authenticated %}
 				<div class="comment">
 					<button onclick="showReplies('comment{{comment.id}}')">Reply</button>
@@ -97,7 +97,7 @@
 			</div>
 			<div class="content">
 				{{reply.content}}
-				<br />
+				<br >
 			</div>
 		</div>
 	</div>

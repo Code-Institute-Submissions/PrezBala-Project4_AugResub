@@ -3,7 +3,7 @@
 <div class="container">
 	<div class="video-wrapper">
 		<video playsinline autoplay muted loop>
-			<source src="static/assets/videos/moon.mp4" type="video/webm" />
+			<source src="static/assets/videos/moon.mp4" type="video/webm" >
 		</video>
 	</div>
 
@@ -38,7 +38,7 @@
 <!-- Forum Info -->
 <div class="forum-info">
 	<div class="chart">MyForum - Stats &nbsp;<i class="fa fa-bar-chart"></i></div>
-	<span><u>{{num_posts}}</u> Posts in <u>{{num_categories}}</u> Categories by <u>{{num_users}}</u> Members.</span><br />
+	<span><u>{{num_posts}}</u> Posts in <u>{{num_categories}}</u> Categories by <u>{{num_users}}</u> Members.</span><br >
 	{% if forums %}
 	<span>Latest post: <b><a href="{{last_post.get_url}}">{{last_post.title}}</a></b> on {{last_post.date|date}} By <a href="">{{last_post.user.fullname|title}}</a></span>.<br>
 	<span>Check <a href="{% url 'latest_posts' %}">the latest posts</a> .</span><br>
