@@ -19,7 +19,7 @@
 			<div class="status"><i class="fa fa-fire"></i></div>
 			<div class="subjects">
 				<a href="{{post.get_url}}">{{post.title}}</a>
-				<br >
+				<br />
 				<span>
 					Started by <b><a href="">{{post.user.fullname|title}}</a></b> .
 				</span>
@@ -32,13 +32,13 @@
 			{% if post.last_reply %}
 			<div class="last-reply">
 				{{post.last_reply.date|date}}
-				<br >
+				<br />
 				By <b><a href="">{{post.last_reply.user.fullname|title}}</a></b>
 			</div>
 			{% else %}
 			<div class="last-reply">
 				{{post.date|date}}
-				<br >
+				<br />
 				By <b><a href="">{{post.user.fullname|title}}</a></b>
 			</div>
 			{% endif %}
@@ -49,7 +49,7 @@
 	{% if objects.is_paginated %}
 	<div class="pagination">pages: {% for num_page in posts.paginator.page_range %} <a href="?page={{num_page}}">{{num_page}}</a> {% endfor %}</div>
 	{% endif %}
-	<!--pagination ends-->
+	<!--Pagination ends-->
 </div>
 
 {% endblock content %}

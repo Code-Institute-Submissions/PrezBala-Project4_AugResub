@@ -6,7 +6,7 @@
 	{% extends 'base.html' %} {% load crispy_forms_tags %} {% block content %}
 
 	<h1 style="text-align:center; margin-block:50px; color:#fcfbfe; font-size: 36px; background-color: black;">LogIn</h1>
-
+	<!-- form to log in -->
 	<form method="POST" action="." style="margin-left:150px;">
 		{% csrf_token %} {{form|crispy}}
 		<input type="submit" value="Signin" style="margin-block:50px;" >
