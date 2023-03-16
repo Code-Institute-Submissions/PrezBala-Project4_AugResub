@@ -126,7 +126,7 @@
     }
 }
 /* Tablets */
- @media screen and (min-width: 460px) and (max-width: 1024px) {
+ @media screen and (min-width: 768px) and (max-width: 1024px) {
      .container{
          margin: 15px;
          padding: 15px;
@@ -147,7 +147,7 @@
     .video-wrapper {
         width: 100%;
         height: 0;
-        padding-bottom: 31.25%; 
+        padding-bottom: 31.25%; /* Adjust this value to change the height while maintaining the aspect ratio */
     }
      video {
          object-fit: initial;
