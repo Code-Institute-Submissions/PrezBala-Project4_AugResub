@@ -23,7 +23,7 @@
      left: 0;
 }
  .video-wrapper {
-    /* Telling our absolute positioned video to be relative to this element */
+
      position: relative;
      margin-top: 20px;
      width: 1800px;
@@ -147,7 +147,7 @@
     .video-wrapper {
         width: 100%;
         height: 0;
-        padding-bottom: 31.25%; /* Adjust this value to change the height while maintaining the aspect ratio */
+        padding-bottom: 31.25%; 
     }
      video {
          object-fit: initial;
