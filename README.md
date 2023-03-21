@@ -2,8 +2,6 @@
 
 <img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/astrohome.png">
 
-This project is based on the Battleship game which is a game that is very widely know. This game is Python based game which runs within the Code Institite mock terminal within Heroku. The main purpose of the game is for the user to play against the computer and the user will have 10 turns to find all of their opponents ships before there ship gets destroyed. 
-
 This project is  based on a forum 'Astro' Community, the ultimate online destination for all space enthusiasts! Where all users can connect with fellow stargazers, aspiring astronauts, and astrophysicists alike. The websites mission is to create a thriving, supportive community where members can explore the wonders of the universe, share their knowledge, and engage in fascinating discussions about space and beyond.
 
 Astro Community utilizes external Python modules to deliver a seamless and efficient user experience. 
@@ -48,7 +46,7 @@ To ensure a personalized experience, my platform offers user-friendly login and 
     + [Log out Page](#log-out-page)
     + [Log in](#log-in)
     + [Create New Post](#create-new-post)
-    + [Delete a post](#delete-a-post)
+    + [Lock or Delete a post](#lock-or-delete-a-post)
     + [Comment on a post](#comment-on-a-post)
     + [Reply on a post](#reply-on-a-post)   
     + [User test](#user-test)
@@ -425,71 +423,70 @@ Testing was taken out to ensure the user could create a new idea.
 
 Assuming user is already logged in
 Steps:
-- Navigate to Add Idea page
+- Navigate to the home page
+- Click the '+' symbol
 - Complete form
-  - Activity Name
-  - Upload Image (optional)
-  - Activity Location
-  - Age Range
-  - Price
-  - Activity Website(optional)
-  - Review (optional)
-- Click Submit
+  - Title
+  - Content
+  - Categories
+  - Tags
+- Click Save
 
-  Expected Outcome if all fields are filled in correctly the user will be redirected to the Brows Ideas page where they can view their idea.  A message appears to say they have successfully created their idea.
+  Expected outcome: If all fields are filled in correctly, the user will be redirected to the home page. The new post will appear for the administrator or forum moderator to review, and they can decide whether or not to authorize it to appear publicly. This function serves to prevent spamming and ensure that all content is reviewed by the administrator or moderators before it is made public on the forum.
 
-  Expected outcome if the fields are not filled in correctly: A nocies to complete the field appears and the cursor goes to the field that needs to be completed.
+  ![Delete Idea wireframe](/static/images/delete-idea-wireframe.png)
 
-  Both of these outcomes happened correctly when tested.
+### Lock / Delete a post
 
-### Delete a post
+The administrator is able to lock or delete any post within the admin page.
 
-Tested to ensure a user could delete their idea.
-
-Assuming the user is logged in
+Assuming the administrator is logged in
 Steps:
-- Navigate to the browse ideas page
-- Click on the Activity Name
-- If the user is the Author of the activity, they will see a delete button and an Edit button under the Activity Name
+- Navigate to the admin page
+- Under Main > Posts
+- The administrator can select to either delete (button) or close a post (checkbox).
 - Click the delete button
-- User is taken to a Delete confirmation page asking them if their wish to delete that idea showing the activity name.
-- Click Submit
+- User is taken to a summary screen of what will be deleted and if the user wishes to continue
+- Click 'Yes i'm sure'.
 
-Expected outcome:  The user will be redirected back to the browse ideas page and the idea along with the comments will be deleted.
+  ![Delete Idea wireframe](/static/images/delete-idea-wireframe.png)
+
+Expected outcome:  The user will be redirected back to admin main page.
 
 The outcome was as expected.
 
 ### Comment on a post
 
 First I checked the comment section when the user is Logged out.
-As expected there is no option to enter a comment at all.  You can view other people’s comments but the box to write your own comment is hidden.
+
+As expected there is no option to enter a comment at all but a message stating the user must login to post with a link attached in the text.  
 
 If the user is logged in:
-Steps
-- Navigate to Browse Ideas
-- Click on the activity name
-- scroll down to the comments section.
-- Write your comment in the comments box
-- Click submit
 
-Expected outcome: The comment will appear in the comment section to the left of the comment box.
+Steps
+
+- Navigate to a post within any of the categories
+- Click on comment and select submit
+- User comment will appear below
+
+  ![Delete Idea wireframe](/static/images/delete-idea-wireframe.png)
+
+Expected outcome: The comment will appear below the original post.
 
 The outcome was as expected.
 
 ### Reply on a post
 
-First I checked the comment section when the user is Logged out.
-As expected there is no option to enter a comment at all.  You can view other people’s comments but the box to write your own comment is hidden.
-
 If the user is logged in:
-Steps
-- Navigate to Browse Ideas
-- Click on the activity name
-- scroll down to the comments section.
-- Write your comment in the comments box
-- Click submit
 
-Expected outcome: The comment will appear in the comment section to the left of the comment box.
+Steps
+
+- Navigate to a post within any of the categories
+- Click on reply to an existing post with comments and select submit
+- User response will appear below
+- User response text box will appear shifted to the right to differentiate from standard comment messages.
+
+Expected outcome: The response will appear below the users comment, but will be shifted to the right.
 
 The outcome was as expected.
 
@@ -499,13 +496,9 @@ I requested my wife's assistance in testing the functionality of the website. Sh
 
 ## Accessibility
 
-I used the [Wave Accessibility](https://wave.webaim.org/)tool to check for aid accessibility testing.
+I utilized the [Wave Accessibility](https://wave.webaim.org/) tool for assistance with accessibility testing. All pages displayed zero errors.
 
-All pages came up with zero errors.
-
-They are showing Alerts that show redundant links, on the home page the site logo and the home link on the nav bar are the same.
-
-I have chosen to leave these links as they are because I think they make navigation around the site better.
+However, there are Alerts related to underlined text and a contrast issue. Despite these alerts, multiple user testing sessions have confirmed the clarity of the content.
 
 ## Validator Testing
 
