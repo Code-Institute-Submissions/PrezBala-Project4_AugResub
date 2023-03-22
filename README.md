@@ -53,6 +53,7 @@ To ensure a personalized experience, my platform offers user-friendly login and 
   * [Accessibility](#accessibility)
   * [Validator Testing](#validator-testing)
   * [PP8 Validator](#pp8-validator)
+  * [Java Validator](#java-validator)
   * [Lighthouse Report](#lighthouse-report)
 - [Responsiveness](#responsiveness)
 - [Bugs](#bugs)
@@ -502,35 +503,40 @@ However, there are Alerts related to underlined text and a contrast issue. Despi
 
 ## Validator Testing
 
-All pages were run through the [w3 HTML validator](https://validator.w3.org/).  Initially, there were some errors, for example there were some missing closing tags and a <p> tag that was used incorrectly inside a <span>.  
+All pages were tested using the [w3 HTML validator](https://validator.w3.org/). At first, there were a few errors, such as missing closing tags and a <p> tag incorrectly placed within a <span>.
 
-All issues were fixed and all pages ran through the checker with no errors.
+All identified issues were resolved, and the pages passed the validator without any errors.
 
-Due to the use of django language within the HTML files to complete this check I had to retrieve the html code from the open web page and right-click to view the source code.  I could then copy and paste this into the validator.
+Since Django's template language was used in the HTML files, the HTML code had to be obtained from the live web page by right-clicking and selecting "View Source." This code was then copied and pasted into the validator for testing.
 
 ![w3 HTML Validator](/static/images/html-check.png)
 
 ## PP8 Validator
 
-All pages were run through the [PEP8 Validator  ](http://pep8online.com/).  There were some errors, for example, lines to long and whitespace. All issues were corrected and all pages apart from the settings.py page have passed.  The settings file contains code that is not mine so I did not change it.
+All pages were tested using the [PEP8 Validator  ](http://pep8online.com/). Some errors were identified, such as lines being too long and unnecessary whitespace. All issues were addressed, and all pages, except for the settings.py page, have passed the validation. The settings.py file contains code not authored by me, so no changes were made to it.
 
 ![PEP8 Validator](/static/images/pep8.png)
 
-I didn't use any javascript in my project so there was nothing to test here.
+## Java Validator
+
+All pages were tested using the [Jshint Validator  ](https://jshint.com/). No errors appeared.
+
+![PEP8 Validator](/static/images/pep8.png)
+
 
 ## Lighthouse Report
 
-The lighthouse report initially showed a low score on performance.  I compressed my hero image which fixed the problem.  
+Initially, the Lighthouse report indicated a low score for best practices. To improve the score, I added accessible names to specific buttons and made sure links were crawlable. After implementing these changes, the score increased to 100, resulting in high ratings across all four criteria.
 
 ![Lighthouse](/static/images/lighthouse.png)
 
 # Responsiveness
 
-I checked the website for responsiveness on all devices from 320px and up.  I checked on Chrome, Edge, Firefox and Opera browers.
+I evaluated the website's responsiveness on all devices with widths of 320px and above. The testing was conducted on Chrome, Edge, Firefox, and Safari browsers.
 
-I did this by using developer tools and resising the website to down to 320px.
+To accomplish this, I utilized developer tools and resized the website down to 320px.
 
-As expected there were no responsiveness issues.
+As anticipated, there were no issues with responsiveness.
 
 # Bugs
 
@@ -572,14 +578,22 @@ To deploy my site to Heroku I followed the following steps
 The app should now be deployed
 
 # References
-- I used a couple of other peoples projects to reference kanbans and ideas on what code I could google.
-  - https://github.com/Gareth-McGirr/Portfolio-Project-4-SizzleAndSteak
-  - https://github.com/MattBCoding/pp4-the-pantry
-- I also followed the Code Institute Blog walkthrough to start my project off.
-- I used the django documentation 
-- I used the summernote documentation
-- I used the bootstrap documentation
+- I referenced other people's projects to gather ideas for kanbans and determine which code snippets to search for on Google.
+- https://github.com/Gareth-McGirr/Portfolio-Project-4-SizzleAndSteak
+- I also followed the Code Institute Blog walkthrough to kickstart my project.
+- Additionally, I watched several YouTube tutorials for ideas and inspiration, with the channels I viewed listed below:
+- freeCodeCamp.org - Create a Twitter-like App
+- AIOC all in one code - Reddit Clone
+- Shadee Merhi - Reddit Clone REACTJS
+- I consulted the Django documentation.
+- I referred to the Summernote documentation.
 
 # Acknowledgements
+
+I want to thank:
+
+My Mentor Andre Aquilina who has provided me several tips/advise which has helped me in figuring out bugs i encountered during testing phases.
+my sister and my wife for testing my site for me.
+The slack community
 
 
