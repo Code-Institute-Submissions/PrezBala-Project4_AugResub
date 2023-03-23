@@ -19,7 +19,7 @@
 			<div class="status"><i class="fa fa-fire"></i></div>
 			<div class="subjects">
 				<a href="{{post.get_url}}">{{post.title}}</a>
-				<br />
+				<br >
 				<span>
 					Started by <b><a href="">{{post.user.fullname|title}}</a></b> .
 				</span>
@@ -31,12 +31,12 @@
 
 			<div class="last-reply">
 				{{post.last_reply.date|date}}
-				<br />
+				<br >
 				By <b><a href="">{{post.last_reply.user.fullname|title}}</a></b>
 			</div>
 		</div>
 		{% endfor %}
 	</div>
 
-	{% endblock content %} 
+	{% endblock content %}
 </div>
