@@ -2,6 +2,7 @@ from django.urls import path, include
 from .views import (
     home, detail, posts, create_post, latest_posts,
     search_result,)
+from . import views
 
 
 urlpatterns = [

@@ -5,6 +5,8 @@ from .forms import PostForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+from django.contrib.admin.views.decorators import staff_member_required
+from django.shortcuts import render
 
 
 def home(request):
@@ -114,3 +116,9 @@ def latest_posts(request):
 def search_result(request):
 
     return render(request, "search.html")
+
+
+@staff_member_required
+def custom_admin_page(request):
+    users = User.objects.all()
+    return render(request, 'verify.html', {'users': users})

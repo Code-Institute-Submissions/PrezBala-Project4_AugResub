@@ -581,7 +581,8 @@ The app should now be deployed
 - I referenced other people's projects to gather ideas for kanbans and determine which code snippets to search for on Google.
 - https://github.com/Gareth-McGirr/Portfolio-Project-4-SizzleAndSteak
 - I also followed the Code Institute Blog walkthrough to kickstart my project.
-- Additionally, I watched several YouTube tutorials for ideas and inspiration, with the channels I viewed listed below:
+- Youtube - This platform has been incredibly useful and after watching countless videos i've learnt several different ways to code certain things i wouldnt have thought of    
+  before, i watched a vast number of channels and listed a few below.
 - freeCodeCamp.org - Create a Twitter-like App
 - AIOC all in one code - Reddit Clone
 - Shadee Merhi - Reddit Clone REACTJS
