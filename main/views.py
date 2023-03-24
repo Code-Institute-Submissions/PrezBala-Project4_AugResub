@@ -1,4 +1,5 @@
 from django.shortcuts import redirect, render, get_object_or_404
+from django.urls import reverse_lazy
 from .models import Author, Category, Post, Comment, Reply
 from .utils import update_views
 from .forms import PostForm
@@ -6,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.contrib.admin.views.decorators import staff_member_required
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 
 def home(request):
@@ -121,3 +123,34 @@ def search_result(request):
 def custom_admin_page(request):
     users = User.objects.all()
     return render(request, 'verify.html', {'users': users})
+
+
+def admin_dashboard(request):
+    posts = Post.objects.all()
+    return render(request, 'admin_dashboard.html', {'posts': posts})
+
+
+class AddPost(CreateView):
+    model = Post
+    fields = ['title', 'content']
+    template_name = 'post_form.html'
+
+    def get_success_url(self):
+        return reverse_lazy('admin_dashboard')
+
+
+class EditPost(UpdateView):
+    model = Post
+    fields = ['title', 'content']
+    template_name = 'post_form.html'
+
+    def get_success_url(self):
+        return reverse_lazy('admin_dashboard')
+
+
+class DeletePost(DeleteView):
+    model = Post
+    template_name = 'post_confirm_delete.html'
+
+    def get_success_url(self):
+        return reverse_lazy('admin_dashboard')
