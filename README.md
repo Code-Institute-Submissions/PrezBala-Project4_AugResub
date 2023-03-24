@@ -107,6 +107,9 @@ Epic 3 User Stories:
 As a new user, I want an easy and intuitive signup process.
 As a returning user, I want a straightforward login experience.
 As a user, I want to safely and easily log out of the site.
+As a developer I want to be able to access backend to edit,remove and delete posts via front.
+As a developer I want to ensure the users are not able to access backend system.
+
 Epic 4 User Stories:
 
 As a user, I want to effortlessly share my ideas by submitting them to the site.
@@ -513,22 +516,31 @@ Since Django's template language was used in the HTML files, the HTML code had t
 
 ## PP8 Validator
 
-All pages were tested using the [PEP8 Validator  ](http://pep8online.com/). Some errors were identified, such as lines being too long and unnecessary whitespace. All issues were addressed, and all pages, except for the settings.py page, have passed the validation. The settings.py file contains code not authored by me, so no changes were made to it.
+Due to pep8online.com being down i've used 
 
-![PEP8 Validator](/static/images/pep8.png)
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/PYTHON1.png">
+
+
+I've also used the Code Institute CI Python Linter validator which came through with no errors.
+
+
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/urlspy.png">
+
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/viewspy.png">
+
 
 ## Java Validator
 
 All pages were tested using the [Jshint Validator  ](https://jshint.com/). No errors appeared.
 
-![PEP8 Validator](/static/images/pep8.png)
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/JAVACHECK.png">
 
 
 ## Lighthouse Report
 
 Initially, the Lighthouse report indicated a low score for best practices. To improve the score, I added accessible names to specific buttons and made sure links were crawlable. After implementing these changes, the score increased to 100, resulting in high ratings across all four criteria.
 
-![Lighthouse](/static/images/lighthouse.png)
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/lighthouse.png">
 
 # Responsiveness
 
@@ -593,8 +605,11 @@ The app should now be deployed
 
 I want to thank:
 
-My Mentor Andre Aquilina who has provided me several tips/advise which has helped me in figuring out bugs i encountered during testing phases.
-my sister and my wife for testing my site for me.
-The slack community
+
++ The Slack community. The help a student is able to receive from the other students is a really great tool to have.
++ My Mentor Andre Aquilina who has provided me several tips/advise which has helped me in figuring out bugs i encountered during testing phases.
++ My sister and my wife for testing my site for me.
++ Youtube - This platform has been incredibly useful and after watching countless videos i've learnt several different ways to code certain things i wouldnt have thought of    before. 
 
 
+[Back to Table of Contents](https://github.com/PrezBala/Project4#table-of-contents) 
