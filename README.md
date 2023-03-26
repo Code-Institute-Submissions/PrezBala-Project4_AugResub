@@ -29,7 +29,6 @@ To ensure a personalized experience, my platform offers user-friendly login and 
     + [Create Post](#create-post)
     + [Profile Picture](#profile-picture)
     + [Engagement](#engagement)
-  * [Future Features](#future-features)
 - [Wireframes](#wireframes)
 - [Database](#database)
 - [Admin Role](#adminrole)
@@ -60,6 +59,7 @@ To ensure a personalized experience, my platform offers user-friendly login and 
 - [Bugs](#bugs)
 - [Deployment](#deployment)
 - [References](#references)
+- [Future Features](#future-features)
 - [Acknowledgements](#acknowledgements)
 
 
@@ -271,12 +271,6 @@ In contrast, the image below demonstrates a scenario where a user comments on th
 
 <img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/1engage.png">
 
-## Future Features
-
-- Implement like and dislike buttons to foster user engagement.
-
-- Incorporate additional animations on the homepage for enhanced aesthetics.
-
 # Wireframes
 
 Home Page and Navbar extended
@@ -375,7 +369,7 @@ Admin  => admindashboard.html
 
 Testing was taken out to ensure a user could sign up to the website.
 Steps:
-- Navigate to [AstroCommunity](https://)
+- Navigate to [AstroCommunity](https://8000-prezbala-project4-ejfkji4gkv2.ws-eu92.gitpod.io/)
 - Navigate to the Sign Up page.
 - Enter User Name and Password
 - Enter Full name, Bio and upload profile picture
@@ -399,7 +393,7 @@ Actual outcome: The expected outcome was met, and the user was redirected to the
 
 Testing was taken out to ensure a user could log in to the website.
 Steps:
-- Navigate to [AstroCommunity](https://k)
+- Navigate to [AstroCommunity](https://8000-prezbala-project4-ejfkji4gkv2.ws-eu92.gitpod.io/)
 - Navigate to Sign In page
 - Enter User Name and Password
 - Click Sign in
@@ -490,7 +484,7 @@ Steps
 
 - Users will encounter a message indicating that the topic is closed and will not have the ability to comment or reply until the post is reopened.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/closedpos2.png">
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/closedpost2.png">
 
 The outcome was as expected.
 
@@ -510,18 +504,20 @@ All pages were tested using the [w3 HTML validator](https://validator.w3.org/). 
 
 All identified issues were resolved, and the pages passed the validator without any errors.
 
-Since Django's template language was used in the HTML files, the HTML code had to be obtained from the live web page by right-clicking and selecting "View Source." This code was then copied and pasted into the validator for testing.
+As the HTML files used Django's template language, the HTML code had to be extracted from the live web page by right-clicking and choosing "View Source." This code was then copied and pasted into the validator for verification.
 
-![w3 HTML Validator](/static/images/html-check.png)
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/htmlcheck.png">
 
 ## PP8 Validator
 
-Due to pep8online.com being down i've used 
+Since pep8online.com was unavailable, I used Flake8 to identify and fix errors in the Python files within the project. These errors primarily consisted of misalignments and typographical errors.
+
+I also utilized an online Python checker that I discovered through a Google search. [Python Checker](https://extendsclass.com/python-tester.html)
 
 <img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/PYTHON1.png">
 
 
-I've also used the Code Institute CI Python Linter validator which came through with no errors.
+I've also employed the Code Institute's CI Python Linter validator, which returned no errors, as demonstrated below.
 
 
 <img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/urlspy.png">
@@ -538,9 +534,31 @@ All pages were tested using the [Jshint Validator  ](https://jshint.com/). No er
 
 ## Lighthouse Report
 
-Initially, the Lighthouse report indicated a low score for best practices. To improve the score, I added accessible names to specific buttons and made sure links were crawlable. After implementing these changes, the score increased to 100, resulting in high ratings across all four criteria.
+Initially, the Lighthouse report indicated a low score for best practices and also indicated where i can make imporvements.
+To improve the score, I added accessible names to specific buttons and made sure links were crawlable.
+
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/error1.png">
+
+I've fixed these issues by adding a void element to the a href attribute for each of the highlighted instances.
+
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/error1.1.png">
+
+In the Lighthouse report, two additional issues were identified: the buttons are missing accessible names, and there is an insufficient contrast ratio between the background and foreground elements.
+
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/error2.png">
+
+I've added an arial label to the text highlighted which resolved that issue.
+
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/error2.2.png">
+
+I made adjustments to the text color to make it more visible for users. This change not only resolved the error but also improved the overall score.
+
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/error2.1.png">
+
+After implementing these changes, the score increased to 100, resulting in high ratings across all four criteria.
 
 <img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/lighthouse.png">
+
 
 # Responsiveness
 
@@ -552,16 +570,21 @@ As anticipated, there were no issues with responsiveness.
 
 # Bugs
 
-- I initially had a bug in the URLs that was confusing the browse ideas page with the idea detail page and causing an error.  I solved this by adding post/ to the front of the url.
->path('post/<slug:pk>/<str:activity_name>/', views.IdeaDetail.as_view(
+- There was an issue that prevented users' profile pictures from being displayed within the forum page, as illustrated below.
 
-- I had a bug that stopped the images being uploaded from the front end.  They could be uploaded from admin.
-After a lot of investigation, I finally worked out that I needed to add the encoding type to the form for it to recognise the image.
->enctype="multipart/form-data"
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/noprofilepic.png">
 
-- There was a bug that stopped the nav bar working when it collapsed down to a button on smaller screens.  The issue was the bootstap link was slightly wrong.  Once corrected the bug was solved.
+I've added the below code within the urls.py for static/media root which resolved the issue.
 
-- I had arranged the image size to all be the same size so that the cards are a uniform height.  I had ‘cover’ on this but this option was cutting the top of the picture off.  To solve this I have changed the css to ‘contain’.  This does not entirely fix the problem because it would be nice to have the pictuers all the same size. In a future development, I would like to add a function for the user to be able to pick the area of the picture they want to upload.
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/profilepiccode.png">
+
+- An issue arose when users who were not logged in could still comment on forum posts. To resolve this, a check was added to ensure that the request user is authenticated before allowing them to comment. This solution was also applied to reply comments and closed posts, preventing users from commenting or replying when a post is closed.
+
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/replyissue.png">
+
+- The search function was not producing any results due to a typo in the search.html file. After identifying and correcting the error, the search function was tested and successfully displayed the relevant results.
+
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/searchresult.png">
 
 # Deployment
 
@@ -600,6 +623,14 @@ The app should now be deployed
 - Shadee Merhi - Reddit Clone REACTJS
 - I consulted the Django documentation.
 - I referred to the Summernote documentation.
+- I contacted student support for guidance on creating an admin page, and they graciously provided various suggestions and ideas to help with the implementation.
+
+# Future Features
+
+- Implement like and dislike buttons to foster user engagement.
+
+- Incorporate additional animations on the homepage for enhanced aesthetics.
+
 
 # Acknowledgements
 
