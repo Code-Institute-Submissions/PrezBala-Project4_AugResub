@@ -164,7 +164,7 @@ Once the user has signed in the navigation menu changes to Log out and Home with
 
 On smaller devices, i ensured the NavBar shows correctly with all text visible.
 
-<img src="https://github.com/PrezBala/ProjectTwo-Quiz/blob/main/assets/readmeimages/mobilewireframe.png">
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/mobileloguser.png">
 
 ### Astro Community Features - ADMIN
 
@@ -174,7 +174,7 @@ Once the user has signed in the navigation menu changes to Log out and Home with
 
 I've designed an Admin interface that provides the administrator with the ability to edit, delete, and approve user-submitted posts.
 
-<img src="https://github.com/PrezBala/ProjectTwo-Quiz/blob/main/assets/readmeimages/mobilewireframe.png">
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/updatebasicmodel.png">
 
 
 ### Home Page
@@ -183,19 +183,19 @@ I've designed an Admin interface that provides the administrator with the abilit
 
 The main page features an engaging .mp4 video of the moon with clouds circulating, emphasizing the space theme of the website.
 
-![Hero Image](/static/images/hero-image-for-readme.png)
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/mobileloguser.png">
 
 A search function is included, allowing users to look for topics of interest. If a match is found, users will be directed to the search results page.
 
-![Welcome Text](/static/images/welcome-text.png)
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/mobileloguser.png">
 
 Once logged in, users can click the '+' symbol to create a new post by entering a title, content, and selecting a category. Tags can also be added to improve search accuracy.
 
-![Welcome Text](/static/images/welcome-text.png)
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/mobileloguser.png">
 
 Forum stats are displayed, showcasing the total post count, details of the latest post, and the user who created it.
 
-![Welcome Text](/static/images/welcome-text.png)
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/mobileloguser.png">
 
 ### Footer
 
@@ -203,15 +203,13 @@ Forum stats are displayed, showcasing the total post count, details of the lates
 
 The Footer has been added to the bottom of the site.
 
-![Footer](/static/images/kidsbored-footer.png)
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/mobileloguser.png">
 
 ### Browse Posts
 
 - User Story: As a user who is not logged in, I want to have the ability to explore forum posts created by other users.
 
 Even without logging in, anyone can access the website to browse posts, navigate between categories, and read through all posts, comments, and replies
-
-![Brows Ideas Page](/static/images/browse-ideas.png)
 
 ### Search
 
@@ -234,14 +232,6 @@ Users can seamlessly sign in and out using consistently styled forms and confirm
 
 User Stories:
 
-![Log In Page](/static/images/sign-in-page.png)
-
-![Log Out Page](/static/images/sign-up.png)
-
-![Sign Up Page](/static/images/sign-out.png)
-
-As evident, all login and logout pages share a consistent design, featuring white text on a black background for optimal visibility and readability.
-
 ### Create Post
 
 - User Story: As a user, I want to effortlessly share my questions or theories on the site so that I can exchange ideas with others.
@@ -250,28 +240,35 @@ Upon logging in, users can create their own posts using forms designed with Cris
 
 The image below showcases the mobile view, illustrating how the forms adapt to a smaller screen, ensuring a user-friendly experience on mobile devices.
 
-![Create idea form](/static/images/create-idea-form.png)
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/mobileloguser.png">
 
 ### Profile Picture
 
 - User Story: As a user, I want the ability to upload a profile picture for the new account I've just created.
 
-![Create idea form](/static/images/create-idea-form.png)
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/profilepic.png">
 
 ### Engagement
 
 User Stories
-- As a user, I want to see the level of engagement for each post, which is represented by clearly labeled images within each category page.
 
-![Edit Idea](/static/images/edit-idea.png)
+- As a user, I want to see the level of engagement for each post, which is represented by clear images within each category page.
+
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/profilepic.png">
 
 When a user creates a new post and it is approved by the site admin, the engagement will be displayed as '0 Engagement Topic.'
 
-![Delete Idea](/static/images/delete-idea.png)
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/profilepic.png">
 
 As users comment or reply within that post, the engagement indicator will be updated accordingly.
 
-![edit and delete](/static/images/edit-and-delete.png)
+The image below represents a new post with no engagement from other users, and thus, a sad face status image is displayed to signify this lack of interaction.
+
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/profilepic.png">
+
+In contrast, the image below demonstrates a scenario where a user comments on the post, resulting in an updated status image displaying a book symbol, which indicates a level of 'low engagement.'
+
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/profilepic.png">
 
 ## Future Features
 
@@ -281,43 +278,29 @@ As users comment or reply within that post, the engagement indicator will be upd
 
 # Wireframes
 
-Home Page
+Home Page and Navbar extended
 
-![Home page wireframe](/static/images/home-page-wireframe.png)
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/wireframe1.png">
 
-Sign Up
+Sign In and Sign Up.
 
-![Sign up wireframe](/static/images/sign-up-wireframe.png)
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/wireframe2.png">
 
-Log In
+Category Selection and Posts.
 
-![Log in wireframe](/static/images/log-in-wireframe.png)
-
-Log out
-
-![log out wireframe](/static/images/log-out-wireframe.png)
-
-Browse Ideas
-
-![Browse Ideas wireframe](/static/images/browse-ideas-wireframe.png)
-
-Idea Detail
-
-![Idea Detail wireframe](/static/images/idea-detail-wireframe.png)
-
-Create/Edit Idea Form
-
-![Create/Edit Idea wireframe](/static/images/create-idea-wireframe.png)
-
-Delete Idea Conirmation
-
-![Delete Idea wireframe](/static/images/delete-idea-wireframe.png)
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/wireframe3.png">
 
 # Database
 
-The system was designed to provide the administrator with CRUD functionality upon signing in. The administrator or a moderator assigned by the administrator can authorize posts, remove posts, delete users, lock posts, and perform other related tasks.
+The system is designed to provide the administrator with CRUD functionality upon signing in. The administrator or a moderator assigned by the administrator can authorize posts, remove posts and also edit posts under the Django administrator function.
 
-![Delete Idea wireframe](/static/images/delete-idea-wireframe.png)
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/admin.png">
+
+# Admin Role
+
+Administrators will possess unique authorizations that standard users do not have access to. This includes an exclusive 'Admin' page accessible through the forum's frontpage navigation bar. On this page, administrators can view all posts and have the option to edit, delete, and authorize comments for public viewing on the website. Additionally, the design has been enhanced to ensure clarity and aesthetic appeal.
+
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/admin.png">
 
 # Security
 

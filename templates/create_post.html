@@ -2,7 +2,7 @@
 
 <h1 style="text-align:center; margin-block:50px; color:#fcfbfe; font-size: 36px; background-color: black;">Hey {{user}}, Write something</h1>
 
-<form method="POST" style="margin-left:150px;">
+<form method="POST" style="margin-left:50px;">
 	{% csrf_token %} {{form|crispy}}
 	<input type="submit" value="Save" style="margin-block:50px;" >
 </form>
