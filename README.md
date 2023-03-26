@@ -107,7 +107,7 @@ Epic 3 User Stories:
 As a new user, I want an easy and intuitive signup process.
 As a returning user, I want a straightforward login experience.
 As a user, I want to safely and easily log out of the site.
-As a developer I want to be able to access backend to edit,remove and delete posts via front.
+As a developer I want to be able to access front and backend to edit,remove and delete posts.
 As a developer I want to ensure the users are not able to access backend system.
 
 Epic 4 User Stories:
@@ -125,6 +125,7 @@ As a user, I want a clear and self-explanatory front page to confirm I am in the
 As a developer, I want to implement a space-themed color scheme for the forum.
 As a developer, I want to feature a space-related video on the main page to captivate users.
 As a developer, I want to standardize the style of all forms and ensure they look good on various devices.
+As a developer, I want to have a well-organized table that enables me to efficiently view, edit, and approve user-generated posts.
 
 --
 
@@ -145,7 +146,7 @@ Epic 6 Tasks
 
 ## Structure
 
-### Astro Community Features
+### Astro Community Features - USER
 
 Navbar
 
@@ -155,15 +156,26 @@ Navigation Menu
 
 When the user is not logged in the navigation bar links to the Sign In, Sign Up page and the Home Page and the '+' Button is not visible
 
-![Navbar before login](/static/images/navbar-before-login.png)
+![Animated GIF](static/assets/gif/nousers.gif)
+
+Once the user has signed in the navigation menu changes to Log out and Home with the '+' appearing, allow the user to create a new post.
+
+![Animated GIF](./path/to/your/gif/output.gif)
+
+On smaller devices, i ensured the NavBar shows correctly with all text visible.
+
+![Animated GIF](./path/to/your/gif/output.gif)
+
+### Astro Community Features - ADMIN
 
 Once the user has signed in the navigation menu changes to Log out and Home with the '+' appearing, allow the user to create a new post.
 
 ![Navbar](/static/images/navbar.png)
 
-On smaller devices, i ensured the NavBar shows correctly with all text visible.
+I've designed an Admin interface that provides the administrator with the ability to edit, delete, and approve user-submitted posts.
 
-![Mobile Navbar](/static/images/mob-navbar.png)
+![Navbar](/static/images/navbar.png)
+
 
 ### Home Page
 

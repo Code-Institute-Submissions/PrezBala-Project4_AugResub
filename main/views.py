@@ -130,15 +130,6 @@ def admin_dashboard(request):
     return render(request, 'admin_dashboard.html', {'posts': posts})
 
 
-class AddPost(CreateView):
-    model = Post
-    fields = ['title', 'content']
-    template_name = 'post_form.html'
-
-    def get_success_url(self):
-        return reverse_lazy('admin_dashboard')
-
-
 class EditPost(UpdateView):
     model = Post
     fields = ['title', 'content']
@@ -154,3 +145,15 @@ class DeletePost(DeleteView):
 
     def get_success_url(self):
         return reverse_lazy('admin_dashboard')
+
+
+def approve_post(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    post.approved = True
+    post.save()
+    return redirect('admin_dashboard')
+
+
+def unapproved_posts(request):
+    posts = Post.objects.filter(approved=False)
+    return render(request, 'admin_dashboard.html', {'posts': posts})
