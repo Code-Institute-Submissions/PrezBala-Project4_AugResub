@@ -160,21 +160,21 @@ When the user is not logged in the navigation bar links to the Sign In, Sign Up 
 
 Once the user has signed in the navigation menu changes to Log out and Home with the '+' appearing, allow the user to create a new post.
 
-![Animated GIF](./path/to/your/gif/output.gif)
+![Animated GIF](static/assets/gif/user.gif)
 
 On smaller devices, i ensured the NavBar shows correctly with all text visible.
 
-![Animated GIF](./path/to/your/gif/output.gif)
+<img src="https://github.com/PrezBala/ProjectTwo-Quiz/blob/main/assets/readmeimages/mobilewireframe.png">
 
 ### Astro Community Features - ADMIN
 
 Once the user has signed in the navigation menu changes to Log out and Home with the '+' appearing, allow the user to create a new post.
 
-![Navbar](/static/images/navbar.png)
+![Animated GIF](static/assets/gif/admin.gif)
 
 I've designed an Admin interface that provides the administrator with the ability to edit, delete, and approve user-submitted posts.
 
-![Navbar](/static/images/navbar.png)
+<img src="https://github.com/PrezBala/ProjectTwo-Quiz/blob/main/assets/readmeimages/mobilewireframe.png">
 
 
 ### Home Page
