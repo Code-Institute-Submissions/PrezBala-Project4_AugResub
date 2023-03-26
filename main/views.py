@@ -157,3 +157,10 @@ def approve_post(request, pk):
 def unapproved_posts(request):
     posts = Post.objects.filter(approved=False)
     return render(request, 'admin_dashboard.html', {'posts': posts})
+
+
+def toggle_close_post(request, pk):
+    post = Post.objects.get(pk=pk)
+    post.closed = not post.closed
+    post.save()
+    return redirect('admin_dashboard')

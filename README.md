@@ -46,8 +46,9 @@ To ensure a personalized experience, my platform offers user-friendly login and 
     + [Log out Page](#log-out-page)
     + [Log in](#log-in)
     + [Create New Post](#create-new-post)
-    + [Lock or Delete a post](#lock-or-delete-a-post)
+    + [Edit Close and Delete a post](#edit-close-and-delete-a-post)
     + [Comment on a post](#comment-on-a-post)
+    + [Close a post](#close-a-post)
     + [Reply on a post](#reply-on-a-post)   
     + [User test](#user-test)
   * [Accessibility](#accessibility)
@@ -93,7 +94,7 @@ As a developer, I want to ensure smooth deployment via ElephantSQL to circumvent
 
 Epic 2 - Database Model and Admin
 
-The focus of this phase was to establish the database model and admin functions, which would allow the admin to approve or reject new posts. Additionally, the admin would have the ability to lock forum posts once the topic question was adequately addressed.
+The focus of this phase was to establish the database model and admin functions, which would allow the admin to approve or reject new posts. Additionally, the admin would have the ability to clsoe forum posts once the topic question was adequately addressed.
 
 Epic 2 User Stories:
 
@@ -174,6 +175,8 @@ Once the user has signed in the navigation menu changes to Log out and Home with
 
 I've designed an Admin interface that provides the administrator with the ability to edit, delete, and approve user-submitted posts.
 
+Administrators will possess unique authorizations that standard users do not have access to. This includes an exclusive 'Admin' page accessible through the forum's frontpage navigation bar. On this page, administrators can view all posts and have the option to edit, delete, and authorize comments for public viewing on the website. Additionally, the design has been enhanced to ensure clarity and aesthetic appeal.
+
 <img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/updatebasicmodel.png">
 
 
@@ -183,19 +186,19 @@ I've designed an Admin interface that provides the administrator with the abilit
 
 The main page features an engaging .mp4 video of the moon with clouds circulating, emphasizing the space theme of the website.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/mobileloguser.png">
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/moonimage.png">
 
 A search function is included, allowing users to look for topics of interest. If a match is found, users will be directed to the search results page.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/mobileloguser.png">
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/searchbox.png">
 
 Once logged in, users can click the '+' symbol to create a new post by entering a title, content, and selecting a category. Tags can also be added to improve search accuracy.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/mobileloguser.png">
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/plus.png">
 
 Forum stats are displayed, showcasing the total post count, details of the latest post, and the user who created it.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/mobileloguser.png">
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/forumstats.png">
 
 ### Footer
 
@@ -203,7 +206,7 @@ Forum stats are displayed, showcasing the total post count, details of the lates
 
 The Footer has been added to the bottom of the site.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/mobileloguser.png">
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/footer.png">
 
 ### Browse Posts
 
@@ -217,9 +220,9 @@ Even without logging in, anyone can access the website to browse posts, navigate
 
 Upon entering their search query, users will be directed to a search results page displaying relevant content, or a message indicating no results were found.
 
-![Detail Page](/static/images/detail-page.png)
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/searchresult.png">
 
------------
+
 ### Log In Log Out Sign Up
 
 User Stories
@@ -240,7 +243,7 @@ Upon logging in, users can create their own posts using forms designed with Cris
 
 The image below showcases the mobile view, illustrating how the forms adapt to a smaller screen, ensuring a user-friendly experience on mobile devices.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/mobileloguser.png">
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/phonesize.png">
 
 ### Profile Picture
 
@@ -254,21 +257,19 @@ User Stories
 
 - As a user, I want to see the level of engagement for each post, which is represented by clear images within each category page.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/profilepic.png">
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/postengagement.png">
 
 When a user creates a new post and it is approved by the site admin, the engagement will be displayed as '0 Engagement Topic.'
-
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/profilepic.png">
 
 As users comment or reply within that post, the engagement indicator will be updated accordingly.
 
 The image below represents a new post with no engagement from other users, and thus, a sad face status image is displayed to signify this lack of interaction.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/profilepic.png">
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/0engage.png">
 
 In contrast, the image below demonstrates a scenario where a user comments on the post, resulting in an updated status image displaying a book symbol, which indicates a level of 'low engagement.'
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/profilepic.png">
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/1engage.png">
 
 ## Future Features
 
@@ -296,17 +297,12 @@ The system is designed to provide the administrator with CRUD functionality upon
 
 <img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/admin.png">
 
-# Admin Role
-
-Administrators will possess unique authorizations that standard users do not have access to. This includes an exclusive 'Admin' page accessible through the forum's frontpage navigation bar. On this page, administrators can view all posts and have the option to edit, delete, and authorize comments for public viewing on the website. Additionally, the design has been enhanced to ensure clarity and aesthetic appeal.
-
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/admin.png">
 
 # Security
 
 Views were safeguarded using Django's view mixin, UserPassesTestMixin. A test function was implemented to employ the mixin and ensure that the user has the necessary authorization to access the page. Moreover, an else statement is used in detail.html to restrict unauthorized users from commenting or replying to posts unless approved by the administrator or moderators.
 
-![Delete Idea wireframe](/static/images/delete-idea-wireframe.png)
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/userlock.png">
 
 Environment variables were stored in an env.py file for security purposes to ensure no secret keys, api keys or sensitive information were added to the repository.  These variables were added to ElephantSQL config vars within the project
 
@@ -314,13 +310,14 @@ Environment variables were stored in an env.py file for security purposes to ens
 
 ## Colour Scheme
 
-To maintain the space theme of the website, I searched for a suitable color palette using Colorswall, ensuring a cohesive and visually appealing design.
-
-LINK TO https://colorswall.com/
+To maintain the space theme of the website, I searched for a suitable color palette using Colorswall [https://colorswall.com/] ensuring a cohesive and visually appealing design.
 
 ## Imagery  
 
 The hero video featured on the website is an .mp4 file depicting the moon with clouds swirling around it. This captivating visual was found through a Google image search using video filters.
+
+## Icons
+The icons on the Forum page were sourced from Font Awesome [https://fontawesome.com/]
 
 # Technologies
 
@@ -366,18 +363,13 @@ Testing was performed on on all navigation links throughout the site.  I achieve
 
 Navbar 'Burger' Menu => Expands Navbar to signin.html, signup.html and index.html
 Home page => index.html
-Browse Ideas => ideas.html
-Idea Title => ideas_detail.html
-Delete Button => idea_delete.html
-Edit Button => idea_edit_form.html
-Edit Button Submit Button => ideas.html
-Activity Website => chosen website(opens in new tab)
-Register => signup.html
 Sign In => signin.html
+Signup => signup.html
+Logout => index.html
 
-In the base.html file, there is a reference to code that checks whether the user is authenticated. If the user is authenticated, they are granted the ability to log in, log out, and sign up.
+Admin only FRONT access
 
-![Delete Idea wireframe](/static/images/delete-idea-wireframe.png)
+Admin  => admindashboard.html
 
 ### Sign Up Page
 
@@ -433,22 +425,17 @@ Steps:
 
   Expected outcome: If all fields are filled in correctly, the user will be redirected to the home page. The new post will appear for the administrator or forum moderator to review, and they can decide whether or not to authorize it to appear publicly. This function serves to prevent spamming and ensure that all content is reviewed by the administrator or moderators before it is made public on the forum.
 
-  ![Delete Idea wireframe](/static/images/delete-idea-wireframe.png)
 
-### Lock / Delete a post
+### Edit Close and Delete a post
 
-The administrator is able to lock or delete any post within the admin page.
+Administrators have the ability to edit or delete any user post through the admin page, which can be accessed via the front-end interface (for user posts only) and the Django Admin page. This comprehensive administration coverage includes creating and editing categories, assigning points to users, and managing tasks such as deleting users and posts.
 
 Assuming the administrator is logged in
 Steps:
 - Navigate to the admin page
-- Under Main > Posts
-- The administrator can select to either delete (button) or close a post (checkbox).
-- Click the delete button
-- User is taken to a summary screen of what will be deleted and if the user wishes to continue
-- Click 'Yes i'm sure'.
+- The administrator can select to either delete, edit,close or approve a post (button)
 
-  ![Delete Idea wireframe](/static/images/delete-idea-wireframe.png)
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/adminpage.png">
 
 Expected outcome:  The user will be redirected back to admin main page.
 
@@ -468,7 +455,7 @@ Steps
 - Click on comment and select submit
 - User comment will appear below
 
-  ![Delete Idea wireframe](/static/images/delete-idea-wireframe.png)
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/commenttest.png">
 
 Expected outcome: The comment will appear below the original post.
 
@@ -486,6 +473,24 @@ Steps
 - User response text box will appear shifted to the right to differentiate from standard comment messages.
 
 Expected outcome: The response will appear below the users comment, but will be shifted to the right.
+
+The outcome was as expected.
+
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/replytest.png">
+
+### Closed post 
+
+If a post is closed, no users will be able to comment and reply until the post is opened up again by the administrator.
+
+Steps
+
+- Navigate to a post with the padlock symbol under status
+
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/closedpost.png">
+
+- Users will encounter a message indicating that the topic is closed and will not have the ability to comment or reply until the post is reopened.
+
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/closedpos2.png">
 
 The outcome was as expected.
 

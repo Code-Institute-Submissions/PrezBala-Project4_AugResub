@@ -20,4 +20,5 @@ urlpatterns = [
         name='delete_post'
     ),
     path('approve_post/<int:pk>/', views.approve_post, name='approve_post'),
+    path('toggle_close_post/<int:pk>/', views.toggle_close_post, name='toggle_close_post'),
 ]

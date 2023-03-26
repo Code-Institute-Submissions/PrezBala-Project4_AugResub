@@ -107,6 +107,7 @@ class Post(models.Model):
     comments = models.ManyToManyField(Comment, blank=True)
     closed = models.BooleanField(default=False)
     state = models.CharField(max_length=40, default="zero")
+    closed = models.BooleanField(default=False)
 
     def save(self, *args, **kwargs):
         if not self.slug:
