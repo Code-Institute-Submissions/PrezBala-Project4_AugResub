@@ -49,6 +49,11 @@
      font-size:16px;
      font-weight: bolder;
 }
+.navbar.expanded .brand {
+    text-shadow: 
+        -1px 0 darkblue, 0 1px darkblue, 1px 0 darkblue, 0 -1px darkblue,
+        -2px 0 darkblue, 0 2px darkblue, 2px 0 darkblue, 0 -2px darkblue;
+}
 /* index.html */
  .container{
      margin: 20px;
