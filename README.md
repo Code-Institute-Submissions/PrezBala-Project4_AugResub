@@ -8,7 +8,7 @@ Astro Community utilizes external Python modules to deliver a seamless and effic
 
 To ensure a personalized experience, my platform offers user-friendly login and signup options. Once the user created their account, they'll be able to post and reply to comments, making there voice heard in the vast expanse of the Astro Community.
 
-[Live link to the game](https://prasena-project-3-battleships.herokuapp.com/)
+[Live link to the forum](https://prasena-project-3-battleships.herokuapp.com/)
 
 <hr>
 
