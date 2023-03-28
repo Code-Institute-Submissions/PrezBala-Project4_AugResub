@@ -92,6 +92,47 @@
  .subforum-divider{
      display: none;
 }
+
+.delete-comment {
+    display: inline-block;
+    position: relative;
+    margin-left: 10px; /* Adjust the left margin as needed */
+}
+
+.delete-btn {
+    background-color: #f44336; /* Red background color */
+    color: white; /* White text color */
+    font-size: 14px; /* Adjust the font size */
+    padding: 6px 12px; /* Adjust the padding around the text */
+    border: none; /* Remove the default border */
+    cursor: pointer; /* Change the cursor to a hand when hovering */
+    border-radius: 4px; /* Add rounded corners */
+    text-align: center; /* Center the text within the button */
+    text-decoration: none; /* Remove any default text decorations */
+    display: inline-block; /* Display the button as an inline-block element */
+    transition-duration: 0.4s; /* Add a transition effect when hovering */
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f; /* Change the background color when hovering */
+    color: white; /* Keep the text color white when hovering */
+}
+
+.comment-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.comment {
+    margin-bottom: 100px; /* Add space between the Reply and Delete buttons */
+  }
+  
+  .delete-comment {
+    float: right;
+    margin-top: -50px; /* Adjust this value to move the button up or down */
+  }
+
 /* Mobile */
  @media screen and (max-width: 460px) {
      .container{

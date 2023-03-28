@@ -164,3 +164,22 @@ def toggle_close_post(request, pk):
     post.closed = not post.closed
     post.save()
     return redirect('admin_dashboard')
+
+
+@login_required
+def delete_comment(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)
+    print("Request User:", request.user)
+    print("Comment User:", comment.user)
+    print("Is Superuser?", request.user.is_superuser)
+    if request.user == comment.user.user or request.user.is_staff:
+        comment.delete()
+    return redirect(request.META.get('HTTP_REFERER', 'home'))
+
+
+@login_required
+def delete_reply(request, reply_id):
+    reply = get_object_or_404(Reply, id=reply_id)
+    if request.user == reply.user or request.user.is_staff:
+        reply.delete()
+    return redirect(request.META.get('HTTP_REFERER', 'home'))

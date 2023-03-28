@@ -58,18 +58,24 @@
 			<div class="authors">
 				<div class="username"><a href="javascript:void(0)">{{comment.user.fullname|title}}</a></div>
 				<div>Role</div>
-				<img src="{{comment.user.profile_pic.url}}" alt="" >
+				<img src="{{comment.user.profile_pic.url}}" alt="">
 				<div>Posts: <u>{{comment.user.num_posts}}</u></div>
 				<div>Points: <u>{{comment.user.points}}</u></div>
 			</div>
 			<div class="content">
-				{{comment.content}}
-				<br >
+				{{ comment.content }}
+				<br>
 				{% if request.user.is_authenticated %}
 				<div class="comment">
 					<button onclick="showReplies('comment{{comment.id}}')">Reply</button>
 				</div>
+				{% if request.user == comment.user.user or request.user.is_staff %}
+				<div class="delete-comment">
+					<button class="delete-btn" onclick="location.href='{% url 'delete_comment' comment.id %}'">Delete</button>
+				</div>
 				{% endif %}
+				{% endif %}
+				<br>
 			</div>
 		</div>
 	</div>

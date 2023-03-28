@@ -20,11 +20,13 @@ function showIconBar() {
 // Comment
 function showComment() {
   var commentArea = document.getElementById("comment-area");
-  commentArea.classList.remove("hide");
+  // Use toggle instead of remove
+  commentArea.classList.toggle("hide");
 }
 
 // Reply
 function showReplies(id) {
   var replyArea = document.getElementById(id);
-  replyArea.classList.remove("hide");
+  // Use toggle instead of remove
+  replyArea.classList.toggle("hide");
 }
