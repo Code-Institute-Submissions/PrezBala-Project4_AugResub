@@ -1,1 +1,1 @@
-web: gunicorn astrocommunity.wsgi
+web: gunicorn astro-community.wsgi
