@@ -166,7 +166,6 @@ def toggle_close_post(request, pk):
     return redirect('admin_dashboard')
 
 
-
 @login_required
 def delete_comment(request, comment_id):
     comment = get_object_or_404(Comment, id=comment_id)

@@ -32,9 +32,9 @@ To ensure a personalized experience, my platform offers user-friendly login and 
 - [Wireframes](#wireframes)
 - [Database](#database)
 - [Admin Role](#adminrole)
+- [Security](#security)
 - [Design](#design)
   * [Colour Scheme](#colour-scheme)
-  * [Profile Pictures](#profilepics)
 - [Technologies](#technologies)
   * [External Python Modules](#external-python-modules)
 - [Testing](#testing)
@@ -290,7 +290,11 @@ Category Selection and Posts.
 
 # Database
 
-The system is designed to provide the administrator with CRUD functionality upon signing in. The administrator or a moderator assigned by the administrator can authorize posts, remove posts and also edit posts under the Django administrator function.
+The system is configured to grant administrators CRUD functionality upon signing in. Both the administrator and any designated moderator can approve, remove, edit, and close posts through the admin function, which is exclusively viewable and accessible by the admin. This feature is demonstrated in the accompanying screenshot.
+
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/adminpost.png">
+
+Additionally, the Django admin page can be accessed for more sophisticated modifications, such as creating categories, assigning points to users, and so on.
 
 <img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/admin.png">
 
@@ -522,7 +526,7 @@ However, there are Alerts related to underlined text and a contrast issue. Despi
 
 ## Validator Testing
 
-All pages were tested using the [w3 HTML validator](https://validator.w3.org/). At first, there were a few errors, such as missing closing tags and a <p> tag incorrectly placed within a <span>.
+All pages were tested using the [w3 HTML validator](https://validator.w3.org/). At first, there were a few errors, such as missing closing tags and a < p> tag incorrectly placed within a < span>.
 
 All identified issues were resolved, and the pages passed the validator without any errors.
 
