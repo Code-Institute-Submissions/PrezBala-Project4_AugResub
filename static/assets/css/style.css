@@ -130,7 +130,16 @@
   
   .delete-comment {
     float: right;
-    margin-top: -50px; /* Adjust this value to move the button up or down */
+    margin-top: -20px; /* Adjust this value to move the button up or down */
+  }
+
+.reply {
+    margin-bottom: 100px; /* Add space between the Reply and Delete buttons */
+  }
+  
+  .delete-reply {
+    float: right;
+    margin-top: 75px; /* Adjust this value to move the button up or down */
   }
 
 /* Mobile */

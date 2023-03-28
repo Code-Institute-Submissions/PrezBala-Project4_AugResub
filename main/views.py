@@ -180,6 +180,9 @@ def delete_comment(request, comment_id):
 @login_required
 def delete_reply(request, reply_id):
     reply = get_object_or_404(Reply, id=reply_id)
-    if request.user == reply.user or request.user.is_staff:
+    print("Request User:", request.user)
+    print("Reply User:", reply.user)
+    print("Is Superuser?", request.user.is_superuser)
+    if request.user == reply.user.user or request.user.is_staff:
         reply.delete()
     return redirect(request.META.get('HTTP_REFERER', 'home'))

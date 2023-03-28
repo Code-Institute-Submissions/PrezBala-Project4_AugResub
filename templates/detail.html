@@ -104,6 +104,11 @@
 			<div class="content">
 				{{reply.content}}
 				<br >
+				{% if request.user == reply.user.user or request.user.is_staff %}
+				<div class="delete-reply">
+					<button class="delete-btn" onclick="location.href='{% url 'delete_reply' reply.id %}'">Delete</button>
+				</div>
+				{% endif %}
 			</div>
 		</div>
 	</div>
