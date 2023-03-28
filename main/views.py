@@ -166,6 +166,7 @@ def toggle_close_post(request, pk):
     return redirect('admin_dashboard')
 
 
+
 @login_required
 def delete_comment(request, comment_id):
     comment = get_object_or_404(Comment, id=comment_id)
@@ -186,3 +187,4 @@ def delete_reply(request, reply_id):
     if request.user == reply.user.user or request.user.is_staff:
         reply.delete()
     return redirect(request.META.get('HTTP_REFERER', 'home'))
+

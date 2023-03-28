@@ -45,6 +45,7 @@ To ensure a personalized experience, my platform offers user-friendly login and 
     + [Log out Page](#log-out-page)
     + [Log in](#log-in)
     + [Create New Post](#create-new-post)
+    + [Delete A Comment or Reply](#delete-a-comment-or-reply)
     + [Edit Close and Delete a post](#edit-close-and-delete-a-post)
     + [Comment on a post](#comment-on-a-post)
     + [Close a post](#close-a-post)
@@ -99,6 +100,8 @@ The focus of this phase was to establish the database model and admin functions,
 Epic 2 User Stories:
 
 As a developer, I want to create the foundation for the database, enabling users to update their posts by commenting below them.
+As a developer, I want to be able to delete comments / replies from all users within Front.
+As a user, I want the ability to remove my own comments and replies, while ensuring that this action is limited exclusively to my own submissions.
 As a non-logged-in user, I want to browse ideas from other users, but I will need to log in to post my own.
 
 Epic 3 - Login, Signup, and Logout Pages
@@ -404,7 +407,7 @@ Actual outcome: The expected outcome was met, and the user was redirected to the
 
 ### Create New Post
 
-Testing was taken out to ensure the user could create a new idea.
+Testing was carried out to ensure the user could create a new post.
 
 Assuming user is already logged in
 Steps:
@@ -419,6 +422,25 @@ Steps:
 
   Expected outcome: If all fields are filled in correctly, the user will be redirected to the home page. The new post will appear for the administrator or forum moderator to review, and they can decide whether or not to authorize it to appear publicly. This function serves to prevent spamming and ensure that all content is reviewed by the administrator or moderators before it is made public on the forum.
 
+  ### Delete A Comment or Reply
+
+Testing was conducted with both super user and standard user roles. The goal was to verify that super users have the ability to delete any comments and replies posted by users on the forum, while standard users can only remove their own comments and replies, and not those of other standard users.
+
+
+Steps:
+- Login as super user (Admin)
+- Navigate to category of interest
+- Navigate to a post
+- Make a comment and reply to the comment
+- Login as standard user (user:Wizard in the screenshot below)
+- Navigate to the same page
+- Make another comment and reply to the main post
+- Check visibility of what can be deleted and also test deletion.
+- Logged back in as superuser and check Front and backend to ensure data removed correctly.
+
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/deletetest.png">
+
+  Expected outcome: A superuser has the capability to remove all comments and replies within the forum, while a standard user can only delete their own posts and responses.
 
 ### Edit Close and Delete a post
 
@@ -437,9 +459,9 @@ The outcome was as expected.
 
 ### Comment on a post
 
-First I checked the comment section when the user is Logged out.
+Initially, I examined the comment section while the user was logged out. 
 
-As expected there is no option to enter a comment at all but a message stating the user must login to post with a link attached in the text.  
+As anticipated, there was no option to submit a comment, but rather a message indicating that the user must log in to post, accompanied by a link within the text.
 
 If the user is logged in:
 
@@ -466,7 +488,7 @@ Steps
 - User response will appear below
 - User response text box will appear shifted to the right to differentiate from standard comment messages.
 
-Expected outcome: The response will appear below the users comment, but will be shifted to the right.
+Expected outcome: When a response is posted, it will appear beneath the user's comment, with the entire response field indented to the right.
 
 The outcome was as expected.
 
@@ -490,7 +512,7 @@ The outcome was as expected.
 
 ### User test
 
-I requested my wife's assistance in testing the functionality of the website. She was asked to sign up for an account and create a new post. Additionally, she tested the search functionality and the engagement viewer to ensure that they updated correctly.
+I enlisted my wife's help to test the website's functionality. She was instructed to register for an account and create a new post. Moreover, she evaluated the search feature and the engagement viewer to confirm that they updated properly.
 
 ## Accessibility
 
@@ -586,6 +608,10 @@ I've added the below code within the urls.py for static/media root which resolve
 
 <img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/searchresult.png">
 
+- I faced a problem where a standard user could delete administrator comments within any forum section. I realized that I had used 'request.user.is_authenticated' instead of the correct conditional statement, 'request.user == comment.user.user or request.user.is_staff'. After rectifying this mistake, the functionality worked as intended.
+
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/deletecommenterror.png">
+
 # Deployment
 
 To deploy my site to Heroku I followed the following steps
@@ -640,6 +666,7 @@ I want to thank:
 + The Slack community. The help a student is able to receive from the other students is a really great tool to have.
 + My Mentor Andre Aquilina who has provided me several tips/advise which has helped me in figuring out bugs i encountered during testing phases.
 + My sister and my wife for testing my site for me.
++ My wife again for the long sessions i spent most my nights studying and testing (PC is in the bedroom haha!)
 + Youtube - This platform has been incredibly useful and after watching countless videos i've learnt several different ways to code certain things i wouldnt have thought of    before. 
 
 

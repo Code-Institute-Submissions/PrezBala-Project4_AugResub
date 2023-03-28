@@ -18,7 +18,7 @@
 			<div class="authors">
 				<div class="username"><a href="javascript:void(0)">{{post.user.fullname|title}}</a></div>
 				<div>Role</div>
-				<img src="{{post.user.profile_pic.url}}" alt="" >
+				<img src="{{post.user.profile_pic.url}}" alt="" />
 				<div>Posts: <u>{{post.user.num_posts}}</u></div>
 				<div>Points: <u>{{post.user.points}}</u></div>
 			</div>
@@ -40,7 +40,7 @@
 		{% csrf_token %}
 		<div class="comment-area hide" id="comment-area">
 			<textarea name="comment" id="" placeholder="comment here ... "></textarea>
-			<input type="submit" value="submit" name="comment-form" >
+			<input type="submit" value="submit" name="comment-form" />
 		</div>
 	</form>
 	{% else %}
@@ -58,13 +58,13 @@
 			<div class="authors">
 				<div class="username"><a href="javascript:void(0)">{{comment.user.fullname|title}}</a></div>
 				<div>Role</div>
-				<img src="{{comment.user.profile_pic.url}}" alt="">
+				<img src="{{comment.user.profile_pic.url}}" alt="" />
 				<div>Posts: <u>{{comment.user.num_posts}}</u></div>
 				<div>Points: <u>{{comment.user.points}}</u></div>
 			</div>
 			<div class="content">
 				{{ comment.content }}
-				<br>
+				<br />
 				{% if request.user.is_authenticated %}
 				<div class="comment">
 					<button onclick="showReplies('comment{{comment.id}}')">Reply</button>
@@ -73,9 +73,8 @@
 				<div class="delete-comment">
 					<button class="delete-btn" onclick="location.href='{% url 'delete_comment' comment.id %}'">Delete</button>
 				</div>
-				{% endif %}
-				{% endif %}
-				<br>
+				{% endif %} {% endif %}
+				<br />
 			</div>
 		</div>
 	</div>
@@ -85,8 +84,8 @@
 		{% csrf_token %}
 		<div class="comment-area hide" id="comment{{comment.id}}">
 			<textarea name="reply" id="" placeholder="reply here ... "></textarea>
-			<input type="submit" value="submit" name="reply-form" >
-			<input type="hidden" name="comment-id" value="{{comment.id}}" >
+			<input type="submit" value="submit" name="reply-form" />
+			<input type="hidden" name="comment-id" value="{{comment.id}}" />
 		</div>
 	</form>
 
@@ -97,13 +96,13 @@
 			<div class="authors">
 				<div class="username"><a href="javascript:void(0)">{{reply.user.fullname|title}}</a></div>
 				<div>Role</div>
-				<img src="{{reply.user.profile_pic.url}}" alt="" >
+				<img src="{{reply.user.profile_pic.url}}" alt="" />
 				<div>Posts: <u>{{reply.user.num_posts}}</u></div>
 				<div>Points: <u>{{reply.user.points}}</u></div>
 			</div>
 			<div class="content">
 				{{reply.content}}
-				<br >
+				<br />
 				{% if request.user == reply.user.user or request.user.is_staff %}
 				<div class="delete-reply">
 					<button class="delete-btn" onclick="location.href='{% url 'delete_reply' reply.id %}'">Delete</button>
