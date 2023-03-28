@@ -623,7 +623,7 @@ To deploy my site to Heroku I followed the following steps
 - Navigate to heroku and create/log into account
 - Click the new button in the top right corner
 - Select create new app
-- Enter app name (kids-bored)
+- Enter app name (astro-community)
 - Select region and click create app (europe)
 - Click the resources tab and search for Heroku Postgres
 - Select hobby dev and continue
