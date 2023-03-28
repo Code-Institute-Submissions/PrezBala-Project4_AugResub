@@ -25,6 +25,8 @@ urlpatterns = [
         views.toggle_close_post,
         name='toggle_close_post'
     ),
-    path('delete_comment/<int:comment_id>/', views.delete_comment, name='delete_comment'),
-    path('delete_reply/<int:reply_id>/', views.delete_reply, name='delete_reply'),
+    path('delete_comment/<int:comment_id>/',
+         views.delete_comment, name='delete_comment'),
+    path('delete_reply/<int:reply_id>/',
+         views.delete_reply, name='delete_reply'),
 ]

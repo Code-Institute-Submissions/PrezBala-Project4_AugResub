@@ -186,4 +186,3 @@ def delete_reply(request, reply_id):
     if request.user == reply.user.user or request.user.is_staff:
         reply.delete()
     return redirect(request.META.get('HTTP_REFERER', 'home'))
-
