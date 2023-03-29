@@ -8,7 +8,7 @@ Astro Community utilizes external Python modules to deliver a seamless and effic
 
 To ensure a personalized experience, my platform offers user-friendly login and signup options. Once the user created their account, they'll be able to post and reply to comments, making there voice heard in the vast expanse of the Astro Community.
 
-[Live link to the forum](https://prasena-project-3-battleships.herokuapp.com/)
+[Live link to the forum](https://astro-community.herokuapp.com/)
 
 <hr>
 
@@ -376,7 +376,7 @@ Admin  => admindashboard.html
 
 Testing was taken out to ensure a user could sign up to the website.
 Steps:
-- Navigate to [AstroCommunity](https://8000-prezbala-project4-ejfkji4gkv2.ws-eu92.gitpod.io/)
+- Navigate to [AstroCommunity](https://astro-community.herokuapp.com/)
 - Navigate to the Sign Up page.
 - Enter User Name and Password
 - Enter Full name, Bio and upload profile picture
@@ -400,7 +400,7 @@ Actual outcome: The expected outcome was met, and the user was redirected to the
 
 Testing was taken out to ensure a user could log in to the website.
 Steps:
-- Navigate to [AstroCommunity](https://8000-prezbala-project4-ejfkji4gkv2.ws-eu92.gitpod.io/)
+- Navigate to [AstroCommunity](https://astro-community.herokuapp.com/)
 - Navigate to Sign In page
 - Enter User Name and Password
 - Click Sign in
@@ -567,7 +567,7 @@ To improve the score, I added accessible names to specific buttons and made sure
 
 I've fixed these issues by adding a void element to the a href attribute for each of the highlighted instances.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/error1.1.png">
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/error1v1.png">
 
 In the Lighthouse report, two additional issues were identified: the buttons are missing accessible names, and there is an insufficient contrast ratio between the background and foreground elements.
 
@@ -575,11 +575,11 @@ In the Lighthouse report, two additional issues were identified: the buttons are
 
 I've added an arial label to the text highlighted which resolved that issue.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/error2.2.png">
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/error2v2.png">
 
 I made adjustments to the text color to make it more visible for users. This change not only resolved the error but also improved the overall score.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/error2.1.png">
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/error2v1.png">
 
 After implementing these changes, the score increased to 100, resulting in high ratings across all four criteria.
 
@@ -616,6 +616,10 @@ I've added the below code within the urls.py for static/media root which resolve
 
 <img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/deletecommenterror.png">
 
+- After deploying my project on Heroku, I faced a problem and sought assistance from student support. The root cause of the issue turned out to be the background image URL I had used within style.css. To resolve it, I linked the URL directly to the image on Cloudinary, as demonstrated in the following image.
+
+<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/urlerror.png">
+
 # Deployment
 
 To deploy my site to Heroku I followed the following steps
@@ -630,9 +634,8 @@ To deploy my site to Heroku I followed the following steps
 - Go to the settings tab and then click reveal config vars
 - Add the following config vars:
   - SECRET_KEY: (Your secret key)
-  - DATABASE_URL: (This should already exist with add on of postgres)
-  - EMAIL_HOST_USER: (email address)
-  - EMAIL_HOST_PASS: (email app password)
+  - DATABASE_URL: (ElephantSQL URL)
+  - HEROKU_POSTGRESQL_OLIVE_URL
   - CLOUNDINARY_URL: (cloudinary api url)
 - Click the deploy tab
 - Scroll down to Connect to GitHub and sign in / authorize when prompted
@@ -652,6 +655,7 @@ The app should now be deployed
 - AIOC all in one code - Reddit Clone
 - Shadee Merhi - Reddit Clone REACTJS
 - I consulted the Django documentation.
+- I'm grateful to the student support team for their exceptional assistance in resolving the deployment issue I experienced with Heroku.
 - I referred to the Summernote documentation.
 - I contacted student support for guidance on creating an admin page, and they graciously provided various suggestions and ideas to help with the implementation.
 
@@ -670,7 +674,7 @@ I want to thank:
 + The Slack community. The help a student is able to receive from the other students is a really great tool to have.
 + My Mentor Andre Aquilina who has provided me several tips/advise which has helped me in figuring out bugs i encountered during testing phases.
 + My sister and my wife for testing my site for me.
-+ My wife again for the long sessions i spent most my nights studying and testing (PC is in the bedroom haha!)
++ I'd like to express my gratitude to my wife for her patience during the numerous late-night study and testing sessions I spent, especially since the computer is in our bedroom!
 + Youtube - This platform has been incredibly useful and after watching countless videos i've learnt several different ways to code certain things i wouldnt have thought of    before. 
 
 
