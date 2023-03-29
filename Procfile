@@ -1,1 +1,1 @@
-web: gunicorn astro-community.wsgi
+web: gunicorn Project4.wsgi
