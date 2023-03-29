@@ -1,4 +1,4 @@
-# Astro - Project 4
+# Astro Community- Project 4
 
 <img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/astrohome.png">
 
