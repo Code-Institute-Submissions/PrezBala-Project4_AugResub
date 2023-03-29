@@ -426,7 +426,7 @@ Steps:
 
   Expected outcome: If all fields are filled in correctly, the user will be redirected to the home page. The new post will appear for the administrator or forum moderator to review, and they can decide whether or not to authorize it to appear publicly. This function serves to prevent spamming and ensure that all content is reviewed by the administrator or moderators before it is made public on the forum.
 
-  ### Delete A Comment or Reply
+### Delete A Comment or Reply
 
 Testing was conducted with both super user and standard user roles. The goal was to verify that super users have the ability to delete any comments and replies posted by users on the forum, while standard users can only remove their own comments and replies, and not those of other standard users.
 
@@ -647,7 +647,7 @@ The app should now be deployed
 
 # References
 - I referenced other people's projects to gather ideas for kanbans and determine which code snippets to search for on Google.
-- https://github.com/Gareth-McGirr/Portfolio-Project-4-SizzleAndSteak
+  https://github.com/Gareth-McGirr/Portfolio-Project-4-SizzleAndSteak
 - I also followed the Code Institute Blog walkthrough to kickstart my project.
 - Youtube - This platform has been incredibly useful and after watching countless videos i've learnt several different ways to code certain things i wouldnt have thought of    
   before, i watched a vast number of channels and listed a few below.
@@ -655,7 +655,6 @@ The app should now be deployed
 - AIOC all in one code - Reddit Clone
 - Shadee Merhi - Reddit Clone REACTJS
 - I consulted the Django documentation.
-- I'm grateful to the student support team for their exceptional assistance in resolving the deployment issue I experienced with Heroku.
 - I referred to the Summernote documentation.
 - I contacted student support for guidance on creating an admin page, and they graciously provided various suggestions and ideas to help with the implementation.
 
@@ -676,6 +675,7 @@ I want to thank:
 + My sister and my wife for testing my site for me.
 + I'd like to express my gratitude to my wife for her patience during the numerous late-night study and testing sessions I spent, especially since the computer is in our bedroom!
 + Youtube - This platform has been incredibly useful and after watching countless videos i've learnt several different ways to code certain things i wouldnt have thought of    before. 
++ I'm grateful to the student support team for their exceptional assistance in resolving the deployment issue I experienced with Heroku.
 
 
 [Back to Table of Contents](https://github.com/PrezBala/Project4#table-of-contents) 
