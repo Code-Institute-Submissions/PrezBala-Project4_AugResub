@@ -34,9 +34,6 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ['astro-community.herokuapp.com', 'localhost']
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://8000-prezbala-project4-zpsj6hrplvb.ws-eu84.gitpod.io/',
-]
 
 # Application definition
 
@@ -56,6 +53,8 @@ INSTALLED_APPS = [
     "register",
     "crispy_forms",
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -158,4 +157,3 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
