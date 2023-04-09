@@ -1,4 +1,4 @@
-from django.urls import path, include
+from django.urls import path
 from .views import (
     home, detail, posts, create_post, latest_posts,
     search_result,)
