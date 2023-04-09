@@ -90,7 +90,7 @@ class Comment(models.Model):
         return self.content[:100]
 
 
-class Post(models.Model):
+class Post(models.Model, HitCountMixin):
     title = models.CharField(max_length=400)
     slug = models.SlugField(max_length=400, unique=True, blank=True)
     user = models.ForeignKey(Author, on_delete=models.CASCADE)

@@ -1,6 +1,6 @@
 # Astro Community- Project 4
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/astrohome.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/astrohome.png">
 
 This project is  based on a forum 'Astro' Community, the ultimate online destination for all space enthusiasts! Where all users can connect with fellow stargazers, aspiring astronauts, and astrophysicists alike. The websites mission is to create a thriving, supportive community where members can explore the wonders of the universe, share their knowledge, and engage in fascinating discussions about space and beyond.
 
@@ -168,7 +168,7 @@ Once the user has signed in the navigation menu changes to Log out and Home with
 
 On smaller devices, i ensured the NavBar shows correctly with all text visible.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/mobileloguser.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/mobileloguser.png">
 
 ### Astro Community Features - ADMIN
 
@@ -180,7 +180,7 @@ I've designed an Admin interface that provides the administrator with the abilit
 
 Administrators will possess unique authorizations that standard users do not have access to. This includes an exclusive 'Admin' page accessible through the forum's frontpage navigation bar. On this page, administrators can view all posts and have the option to edit, delete, and authorize comments for public viewing on the website. Additionally, the design has been enhanced to ensure clarity and aesthetic appeal.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/updatebasicmodel.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/updatebasicmodel.png">
 
 
 ### Home Page
@@ -189,19 +189,19 @@ Administrators will possess unique authorizations that standard users do not hav
 
 The main page features an engaging .mp4 video of the moon with clouds circulating, emphasizing the space theme of the website.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/moonimage.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/moonimage.png">
 
 A search function is included, allowing users to look for topics of interest. If a match is found, users will be directed to the search results page.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/searchbox.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/searchbox.png">
 
 Once logged in, users can click the '+' symbol to create a new post by entering a title, content, and selecting a category. Tags can also be added to improve search accuracy.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/plus.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/plus.png">
 
 Forum stats are displayed, showcasing the total post count, details of the latest post, and the user who created it.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/forumstats.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/forumstats.png">
 
 ### Footer
 
@@ -209,7 +209,7 @@ Forum stats are displayed, showcasing the total post count, details of the lates
 
 The Footer has been added to the bottom of the site.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/footer.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/footer.png">
 
 ### Browse Posts
 
@@ -223,7 +223,7 @@ Even without logging in, anyone can access the website to browse posts, navigate
 
 Upon entering their search query, users will be directed to a search results page displaying relevant content, or a message indicating no results were found.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/searchresult.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/searchresult.png">
 
 
 ### Log In Log Out Sign Up
@@ -246,13 +246,13 @@ Upon logging in, users can create their own posts using forms designed with Cris
 
 The image below showcases the mobile view, illustrating how the forms adapt to a smaller screen, ensuring a user-friendly experience on mobile devices.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/phonesize.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/phonesize.png">
 
 ### Profile Picture
 
 - User Story: As a user, I want the ability to upload a profile picture for the new account I've just created.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/profilepic.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/profilepic.png">
 
 ### Engagement
 
@@ -260,7 +260,7 @@ User Stories
 
 - As a user, I want to see the level of engagement for each post, which is represented by clear images within each category page.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/postengagement.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/postengagement.png">
 
 When a user creates a new post and it is approved by the site admin, the engagement will be displayed as '0 Engagement Topic.'
 
@@ -268,42 +268,42 @@ As users comment or reply within that post, the engagement indicator will be upd
 
 The image below represents a new post with no engagement from other users, and thus, a sad face status image is displayed to signify this lack of interaction.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/0engage.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/0engage.png">
 
 In contrast, the image below demonstrates a scenario where a user comments on the post, resulting in an updated status image displaying a book symbol, which indicates a level of 'low engagement.'
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/1engage.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/1engage.png">
 
 # Wireframes
 
 Home Page and Navbar extended
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/wireframe1.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/wireframe1.png">
 
 Sign In and Sign Up.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/wireframe2.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/wireframe2.png">
 
 Category Selection and Posts.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/wireframe3.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/wireframe3.png">
 
 # Database
 
 The system is configured to grant administrators CRUD functionality upon signing in. Both the administrator and any designated moderator can approve, remove, edit, and close posts through the admin function, which is exclusively viewable and accessible by the admin. This feature is demonstrated in the accompanying screenshot.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/adminpost.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/adminpost.png">
 
 Additionally, the Django admin page can be accessed for more sophisticated modifications, such as creating categories, assigning points to users, and so on.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/admin.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/admin.png">
 
 
 # Security
 
 Views were safeguarded using Django's view mixin, UserPassesTestMixin. A test function was implemented to employ the mixin and ensure that the user has the necessary authorization to access the page. Moreover, an else statement is used in detail.html to restrict unauthorized users from commenting or replying to posts unless approved by the administrator or moderators.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/userlock.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/userlock.png">
 
 Environment variables were stored in an env.py file for security purposes to ensure no secret keys, api keys or sensitive information were added to the repository.  These variables were added to ElephantSQL config vars within the project
 
@@ -442,7 +442,7 @@ Steps:
 - Check visibility of what can be deleted and also test deletion.
 - Logged back in as superuser and check Front and backend to ensure data removed correctly.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/deletetest.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/deletetest.png">
 
   Expected outcome: A superuser has the capability to remove all comments and replies within the forum, while a standard user can only delete their own posts and responses.
 
@@ -455,7 +455,7 @@ Steps:
 - Navigate to the admin page
 - The administrator can select to either delete, edit,close or approve a post (button)
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/adminpage.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/adminpage.png">
 
 Expected outcome:  The user will be redirected back to admin main page.
 
@@ -475,7 +475,7 @@ Steps
 - Click on comment and select submit
 - User comment will appear below
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/commenttest.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/commenttest.png">
 
 Expected outcome: The comment will appear below the original post.
 
@@ -496,7 +496,7 @@ Expected outcome: When a response is posted, it will appear beneath the user's c
 
 The outcome was as expected.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/replytest.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/replytest.png">
 
 ### Closed post 
 
@@ -506,11 +506,11 @@ Steps
 
 - Navigate to a post with the padlock symbol under status
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/closedpost.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/closedpost.png">
 
 - Users will encounter a message indicating that the topic is closed and will not have the ability to comment or reply until the post is reopened.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/closedpost2.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/closedpost2.png">
 
 The outcome was as expected.
 
@@ -532,7 +532,7 @@ All identified issues were resolved, and the pages passed the validator without 
 
 As the HTML files used Django's template language, the HTML code had to be extracted from the live web page by right-clicking and choosing "View Source." This code was then copied and pasted into the validator for verification.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/htmlcheck.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/htmlcheck.png">
 
 ## PP8 Validator
 
@@ -540,22 +540,22 @@ Since pep8online.com was unavailable, I used Flake8 to identify and fix errors i
 
 I also utilized an online Python checker that I discovered through a Google search. [Python Checker](https://extendsclass.com/python-tester.html)
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/PYTHON1.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/PYTHON1.png">
 
 
 I've also employed the Code Institute's CI Python Linter validator, which returned no errors, as demonstrated below.
 
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/urlspy.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/urlspy.png">
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/viewspy.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/viewspy.png">
 
 
 ## Java Validator
 
 All pages were tested using the [Jshint Validator  ](https://jshint.com/). No errors appeared.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/JAVACHECK.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/JAVACHECK.png">
 
 
 ## Lighthouse Report
@@ -563,27 +563,27 @@ All pages were tested using the [Jshint Validator  ](https://jshint.com/). No er
 Initially, the Lighthouse report indicated a low score for best practices and also indicated where i can make imporvements.
 To improve the score, I added accessible names to specific buttons and made sure links were crawlable.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/error1.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/error1.png">
 
 I've fixed these issues by adding a void element to the a href attribute for each of the highlighted instances.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/error1v1.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/error1v1.png">
 
 In the Lighthouse report, two additional issues were identified: the buttons are missing accessible names, and there is an insufficient contrast ratio between the background and foreground elements.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/error2.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/error2.png">
 
 I've added an arial label to the text highlighted which resolved that issue.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/error2v2.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/error2v2.png">
 
 I made adjustments to the text color to make it more visible for users. This change not only resolved the error but also improved the overall score.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/error2v1.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/error2v1.png">
 
 After implementing these changes, the score increased to 100, resulting in high ratings across all four criteria.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/lighthouse.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/lighthouse.png">
 
 
 # Responsiveness
@@ -598,27 +598,27 @@ As anticipated, there were no issues with responsiveness.
 
 - There was an issue that prevented users' profile pictures from being displayed within the forum page, as illustrated below.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/noprofilepic.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/noprofilepic.png">
 
 I've added the below code within the urls.py for static/media root which resolved the issue.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/profilepiccode.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/profilepiccode.png">
 
 - An issue arose when users who were not logged in could still comment on forum posts. To resolve this, a check was added to ensure that the request user is authenticated before allowing them to comment. This solution was also applied to reply comments and closed posts, preventing users from commenting or replying when a post is closed.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/replyissue.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/replyissue.png">
 
 - The search function was not producing any results due to a typo in the search.html file. After identifying and correcting the error, the search function was tested and successfully displayed the relevant results.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/searchresult.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/searchresult.png">
 
 - I faced a problem where a standard user could delete administrator comments within any forum section. I realized that I had used 'request.user.is_authenticated' instead of the correct conditional statement, 'request.user == comment.user.user or request.user.is_staff'. After rectifying this mistake, the functionality worked as intended.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/deletecommenterror.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/deletecommenterror.png">
 
 - After deploying my project on Heroku, I faced a problem and sought assistance from student support. The root cause of the issue turned out to be the background image URL I had used within style.css. To resolve it, I linked the URL directly to the image on Cloudinary, as demonstrated in the following image.
 
-<img src="https://github.com/PrezBala/Project4/blob/main/static/assets/images/urlerror.png">
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/urlerror.png">
 
 # Deployment
 
@@ -678,4 +678,4 @@ I want to thank:
 + I'm grateful to the student support team for their exceptional assistance in resolving the deployment issue I experienced with Heroku.
 
 
-[Back to Table of Contents](https://github.com/PrezBala/Project4#table-of-contents) 
+[Back to Table of Contents](https://github.com/PrezBala/project4#table-of-contents) 
