@@ -35,9 +35,7 @@
 			</nav>
 			<a class="bar-icon" id="iconBar" onclick="hideIconBar()"><i class="fa fa-bars"></i></a>
 			<div class="brand">Astro Community</div>
-			{% if user.is_authenticated %}
-			<div style="font-size: 25px; margin-left: 100px; background-color: #000000; padding: 10px;"><a href="{% url 'create_post' %}" style="color: red;">+</a></div>
-			{% endif %}
+
 		</nav>
 
 		<!--SearchBox Section-->
@@ -55,7 +53,12 @@
 				</form>
 
 			{% if user.is_authenticated %}
-			<p style="font-size: 15px;">You are now logged in, {{ user.username }}. Select the + Symbol above to create a post</p>
+			<p style="font-size: 15px;">You are now logged in, {{ user.username }}</p>
+			{% endif %}
+			{% if user.is_authenticated %}
+			<div class="create-post">
+			  <a href="{% url 'create_post' %}">CLICK HERE TO CREATE A POST</a>
+			</div>
 			{% endif %}
 	</header>
 
