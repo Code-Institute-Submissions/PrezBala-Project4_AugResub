@@ -119,6 +119,16 @@ def search_result(request):
     return render(request, "search.html")
 
 
+def user_dashboard(request):
+    author = get_object_or_404(Author, user=request.user)
+    # Filter comments made by the current user
+    comments = Comment.objects.filter(user=author)
+    context = {
+        'comments': comments,
+    }
+    return render(request, 'user_dashboard.html', context)
+
+
 @staff_member_required
 def custom_admin_page(request):
     users = User.objects.all()
@@ -133,7 +143,16 @@ def admin_dashboard(request):
 class EditPost(UpdateView):
     model = Post
     fields = ['title', 'content']
-    template_name = 'post_form.html'
+    template_name = 'edit_post.html'
+
+    def get_success_url(self):
+        return reverse_lazy('admin_dashboard')
+
+
+class EditComment(UpdateView):
+    model = Comment
+    fields = ['content']  
+    template_name = 'edit_comment.html'  
 
     def get_success_url(self):
         return reverse_lazy('admin_dashboard')

@@ -1,0 +1,56 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>User Dashboard</h1>
+
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+        background-color: #4a4a4a;
+    }
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    th {
+        background-color: #6a6a6a;
+        font-weight: bold;
+        color: white;
+    }
+    tr:nth-child(even) {
+        background-color: #808080;
+    }
+    tr:hover {
+        background-color: #9e9e9e;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<table>
+    <tr>
+        <th>Comment</th>
+        <th>Actions</th>
+    </tr>
+    {% for comment in comments %}
+    <tr>
+        <td>{{ comment.content }}</td>
+        <td>
+            <a href="{% url 'edit_comment' comment.pk %}">Edit</a> |
+            <a href="{% url 'delete_comment' comment.pk %}">Delete</a>
+        </td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td colspan="2">No comments found.</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
