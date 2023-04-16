@@ -54,7 +54,7 @@ To ensure a personalized experience, my platform offers user-friendly login and 
   * [Accessibility](#accessibility)
   * [Validator Testing](#validator-testing)
   * [PP8 Validator](#pp8-validator)
-  * [Java Validator](#java-validator)
+  * [Javascript Validator](#java-validator)
   * [Lighthouse Report](#lighthouse-report)
 - [Responsiveness](#responsiveness)
 - [Bugs](#bugs)
@@ -547,22 +547,24 @@ As the HTML files used Django's template language, the HTML code had to be extra
 
 ## PP8 Validator
 
-Since pep8online.com was unavailable, I used Flake8 to identify and fix errors in the Python files within the project. These errors primarily consisted of misalignments and typographical errors.
+As pep8online.com was not accessible, I utilized Flake8 to detect and rectify issues in the project's Python files. The majority of these issues were related to incorrect formatting, such as incorrect spacing and typographical errors. The errors detected by Flake8 included lines that were too long, blank spaces, indentation, and missing docstrings.
+
+All of the issues detected by Flake8 were successfully resolved, with the exception of the lines that were too long in the migration files and arctictern, which were located within the vscode directory. Since these files were auto-generated, they were not modified.
+
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/flake8.png">
 
 I also utilized an online Python checker that I discovered through a Google search. [Python Checker](https://extendsclass.com/python-tester.html)
 
 <img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/PYTHON1.png">
 
-
 I've also employed the Code Institute's CI Python Linter validator, which returned no errors, as demonstrated below.
-
 
 <img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/urlspy.png">
 
 <img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/viewspy.png">
 
 
-## Java Validator
+## Javascript Validator
 
 All pages were tested using the [Jshint Validator  ](https://jshint.com/). No errors appeared.
 
