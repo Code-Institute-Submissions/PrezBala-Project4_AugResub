@@ -446,7 +446,7 @@ Steps:
 
   Expected outcome: A superuser has the capability to remove all comments and replies within the forum, while a standard user can only delete their own posts and responses.
 
-### Edit Close and Delete a post
+### Edit, Close and Delete a post
 
 Administrators have the ability to edit or delete any user post through the admin page, which can be accessed via the front-end interface (for user posts only) and the Django Admin page. This comprehensive administration coverage includes creating and editing categories, assigning points to users, and managing tasks such as deleting users and posts.
 
@@ -459,6 +459,7 @@ Steps:
 
 Expected outcome:  The user will be redirected back to admin main page.
 
+
 Upon successful login, I have designed a "Comments" page that displays a table containing all the comments made by the user within the forum. The user can select any comment from the list and either edit or delete it.
 
 <img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/commentboard.png">
@@ -468,6 +469,22 @@ Upon selecting the "Edit" option for a specific comment, the user will be direct
 <img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/editcomment.png">
 
 The expected outcome of implementing the feature to edit and delete comments is that users are able to modify and remove their comments successfully.
+
+The outcome was as expected.
+
+### Closed post 
+
+If a post is closed, no users will be able to comment and reply until the post is opened up again by the administrator.
+
+Steps
+
+- Navigate to a post with the padlock symbol under status
+
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/closedpost.png">
+
+- Users will encounter a message indicating that the topic is closed and will not have the ability to comment or reply until the post is reopened.
+
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/closedpost2.png">
 
 The outcome was as expected.
 
@@ -507,23 +524,6 @@ Expected outcome: When a response is posted, it will appear beneath the user's c
 The outcome was as expected.
 
 <img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/replytest.png">
-
-### Closed post 
-
-If a post is closed, no users will be able to comment and reply until the post is opened up again by the administrator.
-
-Steps
-
-- Navigate to a post with the padlock symbol under status
-
-<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/closedpost.png">
-
-- Users will encounter a message indicating that the topic is closed and will not have the ability to comment or reply until the post is reopened.
-
-<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/closedpost2.png">
-
-The outcome was as expected.
-
 
 ### User test
 
