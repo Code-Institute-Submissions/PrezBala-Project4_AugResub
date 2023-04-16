@@ -2,74 +2,72 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8" >
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
-	<meta name="description" content="Forum for space enthusiasts" >
-	<title>{{title}}</title>
-	<!-- my css link -->
-	<link rel="stylesheet" href="{% static 'assets/css/style.css' %}" >
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
-	<link rel="preconnect" href="https://fonts.gstatic.com" >
-	<!-- my google font link -->
-	<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet" >
-</head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Forum for space enthusiasts" />
+		<title>{{title}}</title>
+		<!-- my css link -->
+		<link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<!-- my google font link -->
+		<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet" />
+	</head>
 
-<body>
-	<header>
-<!--NavBar Section-->
+	<body>
+		<header>
+			<!--NavBar Section-->
 
-<nav class="navbar">
-	<nav class="navigation hide" id="navigation">
-		<span class="close-icon" id="close-icon" onclick="showIconBar()"><i class="fa fa-close"></i></span>
-		<ul class="nav-list">
-			<li class="nav-item"><a href="{% url 'home' %}">Home</a></li>
-			{% if user.is_authenticated %}
-			<li class="nav-item"><a href="{% url 'logout' %}">Logout</a></li>
-			<li class="nav-item"><a href="{% url 'user_dashboard' %}">User</a></li>
-			{% if user.is_staff or user.is_superuser %}
-			<li class="nav-item"><a href="{% url 'admin_dashboard' %}">Admin</a></li>
-			{% endif %} {% else %}
-			<li class="nav-item"><a href="{% url 'signup' %}">Signup</a></li>
-			<li class="nav-item"><a href="{% url 'signin' %}">Signin</a></li>
-			{% endif %}
-		</ul>
-	</nav>
-			<a class="bar-icon" id="iconBar" onclick="hideIconBar()"><i class="fa fa-bars"></i></a>
-			<div class="brand">Astro Community</div>
+			<nav class="navbar">
+				<nav class="navigation hide" id="navigation">
+					<span class="close-icon" id="close-icon" onclick="showIconBar()"><i class="fa fa-close"></i></span>
+					<ul class="nav-list">
+						<li class="nav-item"><a href="{% url 'home' %}">Home</a></li>
+						{% if user.is_authenticated %}
+						<li class="nav-item"><a href="{% url 'logout' %}">Logout</a></li>
+						<li class="nav-item"><a href="{% url 'user_dashboard' %}">Comments</a></li>
+						{% if user.is_staff or user.is_superuser %}
+						<li class="nav-item"><a href="{% url 'admin_dashboard' %}">Admin</a></li>
+						{% endif %} {% else %}
+						<li class="nav-item"><a href="{% url 'signup' %}">Signup</a></li>
+						<li class="nav-item"><a href="{% url 'signin' %}">Signin</a></li>
+						{% endif %}
+					</ul>
+				</nav>
+				<a class="bar-icon" id="iconBar" onclick="hideIconBar()"><i class="fa fa-bars"></i></a>
+				<div class="brand">Astro Community</div>
+			</nav>
 
-		</nav>
-
-		<!--SearchBox Section-->
-				<form action="{% url 'search_result' %}" method="GET">
+			<!--SearchBox Section-->
+			<form action="{% url 'search_result' %}" method="GET">
 				<div class="search-box">
 					<div>
 						<select name="search" id="search">
 							<option value="Everything">Everything</option>
 							<option value="Titles">Titles</option>
 						</select>
-						<input type="text" name="q" id="search-input" placeholder="search ..." aria-label="Search" >
+						<input type="text" name="q" id="search-input" placeholder="search ..." aria-label="Search" />
 						<button type="submit" name="search" aria-label="Search"><i class="fa fa-search"></i></button>
 					</div>
 				</div>
-				</form>
+			</form>
 
 			{% if user.is_authenticated %}
 			<p style="font-size: 15px;">You are now logged in, {{ user.username }}</p>
-			{% endif %}
-			{% if user.is_authenticated %}
+			{% endif %} {% if user.is_authenticated %}
 			<div class="create-post">
-			  <a href="{% url 'create_post' %}">CLICK HERE TO CREATE A POST</a>
+				<a href="{% url 'create_post' %}">CLICK HERE TO CREATE A POST</a>
 			</div>
 			{% endif %}
-	</header>
+		</header>
 
-	{% block content %} {% endblock content %}
-	<div style="margin-bottom: 150px;"></div>
+		{% block content %} {% endblock content %}
+		<div style="margin-bottom: 150px;"></div>
 		<!-- Footer -->
-	<footer>
-		<span>&copy; Prasena Balachandran | All Rights Reserved</span>
-	</footer>
+		<footer>
+			<span>&copy; Prasena Balachandran | All Rights Reserved</span>
+		</footer>
 		<script src="{% static 'assets/javascript/main.js' %}"></script>
-</body>
+	</body>
 </html>

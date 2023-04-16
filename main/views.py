@@ -146,16 +146,16 @@ class EditPost(UpdateView):
     template_name = 'edit_post.html'
 
     def get_success_url(self):
-        return reverse_lazy('admin_dashboard')
+        return reverse_lazy('home')
 
 
 class EditComment(UpdateView):
     model = Comment
-    fields = ['content']  
-    template_name = 'edit_comment.html'  
+    fields = ['content']
+    template_name = 'edit_comment.html'
 
     def get_success_url(self):
-        return reverse_lazy('admin_dashboard')
+        return reverse_lazy('home')
 
 
 class DeletePost(DeleteView):
@@ -163,7 +163,7 @@ class DeletePost(DeleteView):
     template_name = 'post_confirm_delete.html'
 
     def get_success_url(self):
-        return reverse_lazy('admin_dashboard')
+        return reverse_lazy('home')
 
 
 def approve_post(request, pk):
