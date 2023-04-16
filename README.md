@@ -91,7 +91,7 @@ As a developer, I need to set up the project to lay the groundwork for incorpora
 As a developer, I want to create a base HTML page to maintain a consistent format across all pages.
 As a user, I want seamless navigation throughout the site on my mobile and tablet devices.
 As a site owner, I want to enable users to sign up for new accounts, fostering communication and interaction.
-As a developer, I want to ensure smooth deployment via ElephantSQL to circumvent potential issues.
+As a developer, I want to ensure smooth deployment via Heroku / ElephantSQL to circumvent potential issues.
 
 Epic 2 - Database Model and Admin
 
@@ -101,7 +101,7 @@ Epic 2 User Stories:
 
 As a developer, I want to create the foundation for the database, enabling users to update their posts by commenting below them.
 As a developer, I want to be able to delete comments / replies from all users within Front.
-As a user, I want the ability to remove my own comments and replies, while ensuring that this action is limited exclusively to my own submissions.
+As a user, I want the ability to remove my own comments,replies and edit my comments while ensuring that this action is limited exclusively to my own submissions.
 As a non-logged-in user, I want to browse ideas from other users, but I will need to log in to post my own.
 
 Epic 3 - Login, Signup, and Logout Pages
@@ -143,6 +143,8 @@ Epic 6 Tasks
 ## Scope
 - Implement responsive design.
 - Create a homepage featuring categories for various topics.
+- Create a admin dashboard only available to the administrator
+- Create a page for comments where users have the ability to edit their comments.
 - Provide a search field for users to locate specific topics.
 - Display user post count and a point system managed by the administrator.
 - Indicate engagement levels using images under each category, representing low engagement, popular topics, closed topics, etc.
@@ -158,13 +160,13 @@ User story - As a user I want to be able to navigate easily around the site easi
 
 Navigation Menu
 
-When the user is not logged in the navigation bar links to the Sign In, Sign Up page and the Home Page and the '+' Button is not visible
+When the user is not logged in the navigation bar links to the Sign In, Sign Up page and the Home Page and the 'Click here to create post' button is not visible
 
-![Animated GIF](static/assets/gif/nousers.gif)
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/pendingsignin.png">
 
-Once the user has signed in the navigation menu changes to Log out and Home with the '+' appearing, allow the user to create a new post.
+Once the user has signed in the navigation menu changes to Comments, Log out and Home.
 
-![Animated GIF](static/assets/gif/user.gif)
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/signin1.png">
 
 On smaller devices, i ensured the NavBar shows correctly with all text visible.
 
@@ -172,16 +174,15 @@ On smaller devices, i ensured the NavBar shows correctly with all text visible.
 
 ### Astro Community Features - ADMIN
 
-Once the user has signed in the navigation menu changes to Log out and Home with the '+' appearing, allow the user to create a new post.
+Once the user has signed in the navigation menu changes to Log out and Home with the "Click here to create a new post" message appearing, allow the user to create a new post.
 
-![Animated GIF](static/assets/gif/admin.gif)
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/adminsignin.png">
 
 I've designed an Admin interface that provides the administrator with the ability to edit, delete, and approve user-submitted posts.
 
 Administrators will possess unique authorizations that standard users do not have access to. This includes an exclusive 'Admin' page accessible through the forum's frontpage navigation bar. On this page, administrators can view all posts and have the option to edit, delete, and authorize comments for public viewing on the website. Additionally, the design has been enhanced to ensure clarity and aesthetic appeal.
 
 <img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/updatebasicmodel.png">
-
 
 ### Home Page
 
@@ -195,7 +196,7 @@ A search function is included, allowing users to look for topics of interest. If
 
 <img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/searchbox.png">
 
-Once logged in, users can click the '+' symbol to create a new post by entering a title, content, and selecting a category. Tags can also be added to improve search accuracy.
+After logging in, users will see a message "Click here to create a new post". By clicking on this message, they can create a new post by providing a title, content, and selecting a category. Additionally, users can add tags to improve the accuracy of the search results.
 
 <img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/plus.png">
 
@@ -382,8 +383,7 @@ Steps:
 - Enter Full name, Bio and upload profile picture
 - Click Update
 
-Expected outcome: The user is redirected to the home page, and the navbar displays the log out and home options along with the '+' symbol.
-Actual outcome: The user is indeed redirected to the home page, and the navbar updates to show the log out and home options as well as the '+' symbol.
+Expected outcome: Upon successful creation of a new post, the user is redirected to the home page. The navbar on the top of the page will be updated to show options for logging out and returning to the home page. Additionally, the navbar will display a button with the message "Click here to create a new post" which users can click to create additional posts.
 
 ### Log out Page
 
@@ -392,9 +392,9 @@ Steps:
 - Navigate to Log Out page
 - Click Confirm button
 
-Expected outcome: Upon completing the action, the user is redirected to the homepage, and the navbar should only display options for signing in, signing up, and returning home. The '+' icon should not be present.
+Expected outcome: Upon completing the action, the user is redirected to the homepage, and the navbar should only display options for signing in, signing up, and returning home. The message "Click here to create a new post" should not be present.
 
-Actual outcome: The expected outcome was met, and the user was redirected to the homepage with the navbar displaying only options for signing in, signing up, and returning home. The '+' icon was not present.
+Actual outcome: The expected outcome was met, and the user was redirected to the homepage with the navbar displaying only options for signing in, signing up, and returning home. The message "Click here to create a new post" was not present.
 
 ### Log in
 
@@ -405,9 +405,9 @@ Steps:
 - Enter User Name and Password
 - Click Sign in
 
-Expected outcome: Upon completing the action, the user is redirected to the homepage, and the navbar should only display options for logging out and returning home. The '+' icon should be present.
+Expected outcome: Upon completing the action, the user is redirected to the homepage, and the navbar should only display options for logging out and returning home. The "Click here to create a new post" message should be present.
 
-Actual outcome: The expected outcome was met, and the user was redirected to the homepage with the navbar displaying only options for logging out and returning home. The '+' icon was present.
+Actual outcome: The expected outcome was met, and the user was redirected to the homepage with the navbar displaying only options for logging out and returning home. The "Click here to create a new post" message was present.
 
 ### Create New Post
 
@@ -416,7 +416,7 @@ Testing was carried out to ensure the user could create a new post.
 Assuming user is already logged in
 Steps:
 - Navigate to the home page
-- Click the '+' symbol
+- Click the button "Click here to create a new post" 
 - Complete form
   - Title
   - Content
@@ -458,6 +458,16 @@ Steps:
 <img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/adminpage.png">
 
 Expected outcome:  The user will be redirected back to admin main page.
+
+Upon successful login, I have designed a "Comments" page that displays a table containing all the comments made by the user within the forum. The user can select any comment from the list and either edit or delete it.
+
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/commentboard.png">
+
+Upon selecting the "Edit" option for a specific comment, the user will be directed to a page that resembles the image provided. This page will allow the user to make modifications to their comment and then save those changes by clicking on the "Update Comment" button. This functionality ensures that users can successfully edit and delete the comments they have made.
+
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/editcomment.png">
+
+The expected outcome of implementing the feature to edit and delete comments is that users are able to modify and remove their comments successfully.
 
 The outcome was as expected.
 
@@ -513,6 +523,7 @@ Steps
 <img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/closedpost2.png">
 
 The outcome was as expected.
+
 
 ### User test
 
