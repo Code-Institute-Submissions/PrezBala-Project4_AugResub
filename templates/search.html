@@ -32,13 +32,13 @@
 			{% if post.last_reply %}
 			<div class="last-reply">
 				{{post.last_reply.date|date}}
-				<br />
+				<br>
 				By <b><a href="">{{post.last_reply.user.fullname|title}}</a></b>
 			</div>
 			{% else %}
 			<div class="last-reply">
 				{{post.date|date}}
-				<br />
+				<br>
 				By <b><a href="">{{post.user.fullname|title}}</a></b>
 			</div>
 			{% endif %}
