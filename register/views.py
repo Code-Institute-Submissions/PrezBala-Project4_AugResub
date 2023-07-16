@@ -8,14 +8,23 @@ from django.contrib.auth import logout as lt
 
 def signup(request):
     context = {}
-    form = UserCreationForm(request.POST or None)
     if request.method == "POST":
-        if form.is_valid():
+        form = UserCreationForm(request.POST)
+        profile_form = UpdateForm(request.POST, request.FILES)
+        if form.is_valid() and profile_form.is_valid():
             new_user = form.save()
+            profile = profile_form.save(commit=False)
+            profile.user = new_user
+            profile.save()
             login(request, new_user)
-            return redirect("update_profile")
+            return redirect("home")
+    else:
+        form = UserCreationForm()
+        profile_form = UpdateForm()
+
     context.update({
         "form": form,
+        "profile_form": profile_form,
         "title": "Signup",
     })
 
@@ -38,25 +47,6 @@ def signin(request):
         "title": "Signin",
     })
     return render(request, "register/signin.html", context)
-
-
-@login_required
-def update_profile(request):
-    context = {}
-    user = request.user
-    form = UpdateForm(request.POST, request.FILES)
-    if request.method == "POST":
-        if form.is_valid():
-            update_profile = form.save(commit=False)
-            update_profile.user = user
-            update_profile.save()
-            return redirect("home")
-
-    context.update({
-        "form": form,
-        "title": "Update Profile",
-    })
-    return render(request, "register/update.html", context)
 
 
 @login_required
