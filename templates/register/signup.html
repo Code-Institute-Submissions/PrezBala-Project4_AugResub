@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Signup Page</title>
-    </head>
+	<head>
+		<title>Signup Page</title>
+	</head>
 
-    {% extends 'base.html' %} {% load crispy_forms_tags %} {% block content %}
+	{% extends 'base.html' %} {% load crispy_forms_tags %} {% block content %}
 
-    <h1 style="text-align:center; margin-block:50px; color:#fcfbfe; font-size: 36px; background-color: black;">Create An Account Below</h1>
-    
-    <!-- form to signup -->
-    <form method="POST" action="." enctype="multipart/form-data" style="margin-left:150px;margin-bottom: 150px;">
-        {% csrf_token %} 
-        {{form|crispy}}
-        {{profile_form|crispy}}
-        <input type="submit" value="Signup" style="margin-block:50px;" >
-    </form>
+	<h1 style="text-align:center; margin-block:50px; color:#fcfbfe; font-size: 36px; background-color: black;">Create An Account Below</h1>
+	<!-- form to signup -->
+	<form method="POST" action="." style="margin-left:150px;margin-bottom: 150px;">
+		{% csrf_token %} {{form|crispy}}
+		<input type="submit" value="Signup" style="margin-block:50px;" >
+	</form>
 
-    {% endblock content %}
+	{% endblock content %}
 </html>
