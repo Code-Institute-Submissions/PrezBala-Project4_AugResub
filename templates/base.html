@@ -55,10 +55,6 @@
 
 			{% if user.is_authenticated %}
 			<p style="font-size: 15px;">You are now logged in, {{ user.username }}</p>
-			{% endif %} {% if user.is_authenticated %}
-			<div class="create-post">
-				<a href="{% url 'create_post' %}">CLICK HERE TO CREATE A POST</a>
-			</div>
 			{% endif %}
 		</header>
 
