@@ -24,13 +24,28 @@
                 });
             });
         </script>
+        <style>
+            /* Responsive form */
+            #signupForm {
+                width: 80%;
+                max-width: 500px;
+                margin: 0 auto 150px;
+            }
+
+            /* On small screens, make the form full width */
+            @media (max-width: 600px) {
+                #signupForm {
+                    width: 100%;
+                }
+            }
+        </style>
     </head>
 
     {% extends 'base.html' %} {% load crispy_forms_tags %} {% block content %}
 
     <h1 style="text-align:center; margin-block:50px; color:#fcfbfe; font-size: 36px; background-color: black;">Create An Account Below</h1>
     <!-- form to signup -->
-    <form id="signupForm" method="POST" action="." enctype="multipart/form-data" style="margin-left:150px;margin-bottom: 150px;">
+    <form id="signupForm" method="POST" action="." enctype="multipart/form-data">
         {% csrf_token %} 
         {{form|crispy}}
         {{profile_form|crispy}}
