@@ -5,18 +5,21 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- Include JQuery -->
         <script>
             $(document).ready(function() {
-                $(':input[type="submit"]').prop('disabled', true); // Initially disable the button
-                $(':input').change(function() {  // Whenever any input field is changed
+                // Add 'check-empty' class to the form inputs 
+                $('#signupForm input').not(':input[type="submit"]').addClass('check-empty');
+
+                $('#signupForm :input[type="submit"]').prop('disabled', true); // Initially disable the button
+                $('#signupForm .check-empty').change(function() {  // Whenever any input field is changed
                     var empty = false;
-                    $(':input').not(':input[type="submit"]').each(function() {  // For all input fields except the submit button
+                    $('#signupForm .check-empty').each(function() {  // For all input fields except the submit button
                         if ($(this).val() == '') {
                             empty = true;
                         }
                     });
                     if (empty) {
-                        $(':input[type="submit"]').prop('disabled', true);
+                        $('#signupForm :input[type="submit"]').prop('disabled', true);
                     } else {
-                        $(':input[type="submit"]').prop('disabled', false);
+                        $('#signupForm :input[type="submit"]').prop('disabled', false);
                     }
                 });
             });
@@ -27,7 +30,7 @@
 
     <h1 style="text-align:center; margin-block:50px; color:#fcfbfe; font-size: 36px; background-color: black;">Create An Account Below</h1>
     <!-- form to signup -->
-    <form method="POST" action="." enctype="multipart/form-data" style="margin-left:150px;margin-bottom: 150px;">
+    <form id="signupForm" method="POST" action="." enctype="multipart/form-data" style="margin-left:150px;margin-bottom: 150px;">
         {% csrf_token %} 
         {{form|crispy}}
         {{profile_form|crispy}}
