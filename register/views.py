@@ -2,13 +2,13 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
-from register.forms import UpdateForm
+from register.forms import SignupForm, UpdateForm
 from django.contrib.auth import logout as lt
 
 
 def signup(request):
     context = {}
-    form = UserCreationForm(request.POST or None)
+    form = SignupForm(request.POST or None)
     if request.method == "POST":
         if form.is_valid():
             new_user = form.save()
@@ -56,7 +56,7 @@ def update_profile(request):
         "form": form,
         "title": "Update Profile",
     })
-    return render(request, "register/update.html", context)
+    return render(request, "register/signup.html", context)
 
 
 @login_required
