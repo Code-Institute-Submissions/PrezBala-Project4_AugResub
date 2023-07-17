@@ -32,14 +32,6 @@
                 margin: 0 auto 150px;
             }
 
-            h1 {
-                text-align: center;
-                margin-block: 50px;
-                color: #fcfbfe;
-                font-size: 36px;
-                background-color: black;
-            }
-
             /* On small screens, make the form full width */
             @media (max-width: 600px) {
                 #signupForm {
@@ -48,9 +40,10 @@
             }
 
             /* On large screens, align the text to the left */
-            @media (min-width: 900px) {
-                h1 {
-                    text-align: left;
+            @media (min-width: 1025px) {
+                #signupForm {
+                    width: 80%; 
+                    margin-left: 0; 
                 }
             }
         </style>
@@ -58,7 +51,7 @@
 
     {% extends 'base.html' %} {% load crispy_forms_tags %} {% block content %}
 
-    <h1>Create An Account Below</h1>
+    <h1 style="text-align:center; margin-block:50px; color:#fcfbfe; font-size: 36px; background-color: black;">Create An Account Below</h1>
 
     <form id="signupForm" method="POST" action="." enctype="multipart/form-data">
         {% csrf_token %} 
