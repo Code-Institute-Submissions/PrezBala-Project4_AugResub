@@ -2,16 +2,16 @@
 <html lang="en">
     <head>
         <title>Signup Page</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- Include JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
             $(document).ready(function() {
                 // Add 'check-empty' class to the form inputs 
                 $('#signupForm input').not(':input[type="submit"]').addClass('check-empty');
 
-                $('#signupForm :input[type="submit"]').prop('disabled', true); // Initially disable the button
-                $('#signupForm .check-empty').change(function() {  // Whenever any input field is changed
+                $('#signupForm :input[type="submit"]').prop('disabled', true); 
+                $('#signupForm .check-empty').change(function() { 
                     var empty = false;
-                    $('#signupForm .check-empty').each(function() {  // For all input fields except the submit button
+                    $('#signupForm .check-empty').each(function() { 
                         if ($(this).val() == '') {
                             empty = true;
                         }
@@ -44,7 +44,7 @@
     {% extends 'base.html' %} {% load crispy_forms_tags %} {% block content %}
 
     <h1 style="text-align:center; margin-block:50px; color:#fcfbfe; font-size: 36px; background-color: black;">Create An Account Below</h1>
-    <!-- form to signup -->
+
     <form id="signupForm" method="POST" action="." enctype="multipart/form-data">
         {% csrf_token %} 
         {{form|crispy}}
