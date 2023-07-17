@@ -8,6 +8,7 @@ from django.contrib.auth.models import User
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.contrib.admin.views.decorators import staff_member_required
 from django.views.generic.edit import UpdateView, DeleteView
+from django.contrib.auth.decorators import user_passes_test
 
 
 def is_superuser_or_staff(user):
