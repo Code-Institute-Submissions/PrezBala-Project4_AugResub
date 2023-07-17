@@ -10,7 +10,7 @@ def signup(request):
     context = {}
     form = UserCreationForm(request.POST or None)
     profile_form = UpdateForm(request.POST, request.FILES)
-    
+   
     if request.method == "POST":
         if form.is_valid() and profile_form.is_valid():
             new_user = form.save()
@@ -27,7 +27,6 @@ def signup(request):
     })
 
     return render(request, "register/signup.html", context)
-
 
 
 def signin(request):

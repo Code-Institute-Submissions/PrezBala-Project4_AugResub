@@ -61,6 +61,7 @@ To ensure a personalized experience, my platform offers user-friendly login and 
 - [Deployment](#deployment)
 - [References](#references)
 - [Future Features](#future-features)
+- [Resubmission Notes](#resubmission-notes)
 - [Acknowledgements](#acknowledgements)
 
 
@@ -677,6 +678,34 @@ The app should now be deployed
 
 - Incorporate additional animations on the homepage for enhanced aesthetics.
 
+# Resubmission Notes
+
+After making modifications to the signup.html file, I have executed validator checks to ensure its accuracy and to confirm that there are no present errors. The image displayed below serves as confirmation of this validation process and its successful outcome.
+
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/resub1.png">
+
+
+In addition to individual file checks, I have also executed a comprehensive HTML validator check on the entire site using a URL-based verification. This comprehensive scan returned positive results, indicating no existing errors across the website, as visually evidenced in the image below.
+
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/resub2.png">
+
+In the signup.html file, I've introduced several enhancements. Now, apart from the username and password fields, the form also includes areas for entering the full name, bio, and uploading a profile picture. Furthermore, I've implemented a function that validates that all these fields are filled out before the user can finalize the sign-up process.
+
+This precaution prevents potential backdoor entries and minimizes the risk of 500 server errors. The screenshot provided below illustrates the updated appearance of the signup screen.
+
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/resub3.png">
+
+I've simplified the display by eliminating the extra details under MyForum stats. These additional elements were not just unnecessary, but they were also causing navigational issues within the site. Now, the interface primarily showcases essential forum statistics, as depicted in the screenshot below. This refinement enhances the site's user-friendliness.
+
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/resub4.png">
+
+In the process of a user creating a post, administrative approval is necessary. Previously, users could access their unapproved posts through the 'Latest Post' link in the subforum column. To prevent premature access, I've removed this link functionality. Now, while it does show that a post has been created by a user, it will not be publicly visible until the administrator grants approval. The screenshot below illustrates that the text is no longer clickable, reflecting this change.
+
+<img src="https://github.com/PrezBala/project4/blob/main/static/assets/images/resub5.png">
+
+I discovered an issue where ordinary users could gain access to the admin dashboard simply by appending 'admin_dashboard' to the end of the URL. To rectify this security loophole, I have added extra code within the views.py file. I imported the function 'user_passes_test' from 'django.contrib.auth.decorators' and added the decorator '@user_passes_test(is_superuser_or_staff)' to the 'admin_dashboard' definition. 
+
+Now, this adjustment guarantees that only staff and administrator users can access the specified URL. If a standard user attempts to access it, they will be presented with a 'Not Found' error message instead.
 
 # Acknowledgements
 
