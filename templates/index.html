@@ -32,6 +32,10 @@
 			<div class="subforum-stats subforum-column center">
 				<span>{{forum.num_posts}} Posts</span>
 			</div>
+			<div class="subforum-info subforum-column">
+				<b>Last post</b> by {{forum.last_post.user.fullname|title}} <br>
+				on <small>{{forum.last_post.date|date}}</small>
+			</div>			
 		</div>
 
 		{% endfor %}
