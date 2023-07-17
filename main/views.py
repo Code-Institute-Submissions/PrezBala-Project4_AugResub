@@ -10,6 +10,10 @@ from django.contrib.admin.views.decorators import staff_member_required
 from django.views.generic.edit import UpdateView, DeleteView
 
 
+def is_superuser_or_staff(user):
+    return user.is_superuser or user.is_staff
+
+
 def home(request):
     forums = Category.objects.all()
     num_posts = Post.objects.all().count()
@@ -135,6 +139,7 @@ def custom_admin_page(request):
     return render(request, 'verify.html', {'users': users})
 
 
+@user_passes_test(is_superuser_or_staff)
 def admin_dashboard(request):
     posts = Post.objects.all()
     return render(request, 'admin_dashboard.html', {'posts': posts})
